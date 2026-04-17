@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - College Notes Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">📚 College Notes</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="auth-section">
+            <div class="auth-card">
+                <h1>Login</h1>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">🔑 Login</button>
+                    <div id="loginMessage" class="message"></div>
+                </form>
+                <p class="auth-link">Don't have an account? <a href="signup.html">Sign up here</a></p>
+                <p class="auth-link"><a href="index.html">Back to Home</a></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            try {
+                await login(email, password);
+                showMessage('loginMessage', 'Login successful! Redirecting...', 'success');
+                setTimeout(() => window.location.href = 'index.html', 1500);
+            } catch (error) {
+                showMessage('loginMessage', error.message, 'error');
+            }
+        });
+
+        function showMessage(elementId, text, type) {
+            const msg = document.getElementById(elementId);
+            msg.textContent = text;
+            msg.className = `message show ${type}`;
+        }
+    </script>
+</body>
+</html>

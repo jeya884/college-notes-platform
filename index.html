@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="description" content="College Notes Platform - Download and share college notes">
+    <title>College Notes Platform</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%236366f1' width='192' height='192'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='100' fill='white' font-weight='bold'>N</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">📚 College Notes</div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="#" class="nav-link" id="browseLink">Browse</a>
+                <div class="nav-actions">
+                    <button id="searchBtn" class="nav-btn search-btn">🔍</button>
+                    <button id="userBtn" class="nav-btn">👤</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>College Notes Made Easy</h1>
+                <p>Download, upload, and share college notes seamlessly</p>
+                <div class="hero-buttons">
+                    <button id="downloadBtn" class="btn btn-primary">📥 Download Notes</button>
+                    <button id="uploadBtn" class="btn btn-secondary">📤 Upload Notes</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Bar -->
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search notes by subject, course, or keyword..." class="search-input">
+                <select id="categoryFilter" class="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="eng">Engineering</option>
+                    <option value="business">Business</option>
+                    <option value="science">Science</option>
+                    <option value="arts">Arts</option>
+                    <option value="other">Other</option>
+                </select>
+                <button id="applyFilter" class="btn btn-small">Filter</button>
+            </div>
+        </section>
+
+        <!-- Featured Notes -->
+        <section class="featured">
+            <h2>Featured Notes</h2>
+            <div id="featuredNotes" class="notes-grid">
+                <!-- Notes will be loaded here -->
+            </div>
+        </section>
+
+        <!-- All Notes -->
+        <section class="all-notes">
+            <h2>All Notes</h2>
+            <div id="notesList" class="notes-grid">
+                <!-- Notes will be loaded here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- User Menu Modal -->
+    <div id="userMenu" class="modal">
+        <div class="modal-content user-menu-content">
+            <button class="close-btn" onclick="closeModal('userMenu')">&times;</button>
+            <div id="authButtons">
+                <button id="loginBtn" class="btn btn-primary full-width">🔑 Login</button>
+                <button id="signupBtn" class="btn btn-secondary full-width">✍️ Sign Up</button>
+            </div>
+            <div id="userActions" style="display: none;">
+                <div class="user-info">
+                    <p id="userEmail"></p>
+                    <p id="userRole"></p>
+                </div>
+                <button id="dashboardBtn" class="btn btn-primary full-width">📊 My Dashboard</button>
+                <button id="logoutBtn" class="btn btn-secondary full-width">🚪 Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('searchModal')">&times;</button>
+            <h2>Search Notes</h2>
+            <input type="text" id="searchModalInput" placeholder="Enter search term..." class="search-input">
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 College Notes Platform. All rights reserved.</p>
+        <p>Built with ❤️ for students</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/apip.js"></script>
+    <script>
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(err => console.log('SW registration failed:', err));
+        }
+    </script>
+</body>
+</html>

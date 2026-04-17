@@ -1,0 +1,15 @@
+<!-- Add this to index.html <head> section to load Supabase library -->
+<!-- Supabase Client Library (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.43.4"></script>
+
+<!-- Alternative (if above fails): -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- For production with better error handling: -->
+<script>
+  if (!window.supabase) {
+    console.error('Supabase library failed to load. Please check CDN.');
+    // Fallback option
+    document.write('<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"><\/script>');
+  }
+</script>
