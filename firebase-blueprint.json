@@ -1,0 +1,108 @@
+{
+  "entities": {
+    "note": {
+      "title": "Note",
+      "description": "College study notes categorized by academic year and semester",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "subject": { "type": "string" },
+        "course_code": { "type": "string" },
+        "year": { "type": "string", "enum": ["Year 1", "Year 2"] },
+        "semester": { "type": "string", "enum": ["Semester 1", "Semester 2", "Semester 3", "Semester 4"] },
+        "description": { "type": "string" },
+        "file_name": { "type": "string" },
+        "download_count": { "type": "number" },
+        "uploaded_by": { "type": "string" },
+        "created_at": { "type": "string" }
+      },
+      "required": ["title", "subject", "year", "semester"]
+    },
+    "assignment": {
+      "title": "Assignment",
+      "description": "Course assignments organized by year and semester",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "subject": { "type": "string" },
+        "faculty": { "type": "string" },
+        "year": { "type": "string", "enum": ["Year 1", "Year 2"] },
+        "semester": { "type": "string", "enum": ["Semester 1", "Semester 2", "Semester 3", "Semester 4"] },
+        "due_date": { "type": "string" },
+        "max_marks": { "type": "number" },
+        "status": { "type": "string", "enum": ["Open", "Urgent", "Closed"] },
+        "description": { "type": "string" },
+        "submission_info": { "type": "string" },
+        "created_at": { "type": "string" }
+      },
+      "required": ["title", "subject", "due_date", "year", "semester"]
+    },
+    "timetableSlot": {
+      "title": "Timetable Slot",
+      "description": "Weekly lecture time table schedule per year and semester",
+      "type": "object",
+      "properties": {
+        "day": { "type": "string" },
+        "time": { "type": "string" },
+        "year": { "type": "string", "enum": ["Year 1", "Year 2"] },
+        "semester": { "type": "string", "enum": ["Semester 1", "Semester 2", "Semester 3", "Semester 4"] },
+        "subject": { "type": "string" },
+        "course_code": { "type": "string" },
+        "faculty": { "type": "string" },
+        "room": { "type": "string" }
+      },
+      "required": ["day", "time", "subject", "year", "semester"]
+    },
+    "announcement": {
+      "title": "Announcement",
+      "description": "College and department notices for student communication",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "category": { "type": "string" },
+        "priority": { "type": "string" },
+        "author": { "type": "string" },
+        "year": { "type": "string" },
+        "date": { "type": "string" }
+      },
+      "required": ["title", "content"]
+    },
+    "student": {
+      "title": "Student",
+      "description": "Student roll number registry with year and semester",
+      "type": "object",
+      "properties": {
+        "roll_number": { "type": "string" },
+        "name": { "type": "string" },
+        "year": { "type": "string", "enum": ["Year 1", "Year 2"] },
+        "semester": { "type": "string", "enum": ["Semester 1", "Semester 2", "Semester 3", "Semester 4"] },
+        "status": { "type": "string", "enum": ["active", "inactive"] },
+        "created_at": { "type": "string" }
+      },
+      "required": ["roll_number"]
+    }
+  },
+  "firestore": {
+    "/notes/{noteId}": {
+      "schema": "note",
+      "description": "Collection of all study notes displayed by year and semester"
+    },
+    "/assignments/{assignmentId}": {
+      "schema": "assignment",
+      "description": "Collection of student assignments filtered by year and semester"
+    },
+    "/timetable/{slotId}": {
+      "schema": "timetableSlot",
+      "description": "Weekly timetable slots organized by year and semester"
+    },
+    "/announcements/{noticeId}": {
+      "schema": "announcement",
+      "description": "Official announcements and circulars"
+    },
+    "/students/{rollNumber}": {
+      "schema": "student",
+      "description": "Registered student roll numbers registry"
+    }
+  }
+}

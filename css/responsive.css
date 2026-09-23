@@ -1,0 +1,233 @@
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-input,
+    .category-filter {
+        width: 100%;
+    }
+
+    .notes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-layout,
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar,
+    .dashboard-sidebar {
+        position: static;
+    }
+
+    .admin-sidebar ul,
+    .dashboard-sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .sidebar-link {
+        margin-bottom: 0;
+        flex: 1;
+        min-width: 150px;
+        text-align: center;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .nav-container {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .note-card {
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .auth-card {
+        padding: 25px 15px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+    }
+
+    .admin-main,
+    .dashboard-main {
+        padding: 15px;
+    }
+
+    .upload-form {
+        padding: 15px;
+    }
+
+    .nav-actions {
+        gap: 5px;
+    }
+
+    .nav-btn {
+        padding: 6px 10px;
+        font-size: 1rem;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px;
+    }
+
+    .notes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) {
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        margin-bottom: 15px;
+    }
+}
+
+/* Dark mode support (if supported by system) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-bg: #1f2937;
+        --text-dark: #f9fafb;
+        --text-light: #d1d5db;
+        --border-color: #374151;
+    }
+
+    body {
+        background-color: #111827;
+    }
+
+    .navbar,
+    .modal-content,
+    .auth-card,
+    .admin-main,
+    .dashboard-main,
+    .admin-sidebar,
+    .dashboard-sidebar,
+    .note-card {
+        background: #1f2937;
+        color: #f9fafb;
+    }
+
+    .note-footer button {
+        background: #111827;
+        border-color: #374151;
+        color: #f9fafb;
+    }
+
+    .upload-form {
+        background: #111827;
+        border-color: #374151;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .footer,
+    .btn,
+    .modal {
+        display: none;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .note-card {
+        page-break-inside: avoid;
+    }
+}

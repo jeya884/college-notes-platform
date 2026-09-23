@@ -1,0 +1,3686 @@
+{
+  "admin": {
+    "password": "MBA Notes"
+  },
+  "students": [
+    {
+      "roll_number": "25MBA01",
+      "name": "MBA Student 01",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA02",
+      "name": "MBA Student 02",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA03",
+      "name": "MBA Student 03",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA04",
+      "name": "MBA Student 04",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA05",
+      "name": "MBA Student 05",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA06",
+      "name": "MBA Student 06",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA07",
+      "name": "MBA Student 07",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA08",
+      "name": "MBA Student 08",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA09",
+      "name": "MBA Student 09",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA10",
+      "name": "MBA Student 10",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA11",
+      "name": "MBA Student 11",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA12",
+      "name": "MBA Student 12",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA13",
+      "name": "MBA Student 13",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA14",
+      "name": "MBA Student 14",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA15",
+      "name": "MBA Student 15",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA16",
+      "name": "MBA Student 16",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA17",
+      "name": "MBA Student 17",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA18",
+      "name": "MBA Student 18",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA19",
+      "name": "MBA Student 19",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA20",
+      "name": "MBA Student 20",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA21",
+      "name": "MBA Student 21",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA22",
+      "name": "MBA Student 22",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA23",
+      "name": "MBA Student 23",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA24",
+      "name": "MBA Student 24",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA25",
+      "name": "MBA Student 25",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA26",
+      "name": "MBA Student 26",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA27",
+      "name": "MBA Student 27",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA28",
+      "name": "MBA Student 28",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA29",
+      "name": "MBA Student 29",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA30",
+      "name": "MBA Student 30",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA31",
+      "name": "MBA Student 31",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA32",
+      "name": "MBA Student 32",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA33",
+      "name": "MBA Student 33",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA34",
+      "name": "MBA Student 34",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA35",
+      "name": "MBA Student 35",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA36",
+      "name": "MBA Student 36",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA37",
+      "name": "MBA Student 37",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA38",
+      "name": "MBA Student 38",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA39",
+      "name": "MBA Student 39",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA40",
+      "name": "MBA Student 40",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA41",
+      "name": "MBA Student 41",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA42",
+      "name": "MBA Student 42",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA43",
+      "name": "MBA Student 43",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA44",
+      "name": "MBA Student 44",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA45",
+      "name": "MBA Student 45",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA46",
+      "name": "MBA Student 46",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA47",
+      "name": "MBA Student 47",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA48",
+      "name": "MBA Student 48",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA49",
+      "name": "MBA Student 49",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA50",
+      "name": "MBA Student 50",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA51",
+      "name": "MBA Student 51",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA52",
+      "name": "MBA Student 52",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA53",
+      "name": "MBA Student 53",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA54",
+      "name": "MBA Student 54",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA55",
+      "name": "MBA Student 55",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA56",
+      "name": "MBA Student 56",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA57",
+      "name": "MBA Student 57",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA58",
+      "name": "MBA Student 58",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA59",
+      "name": "MBA Student 59",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA60",
+      "name": "MBA Student 60",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA61",
+      "name": "MBA Student 61",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA62",
+      "name": "MBA Student 62",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA63",
+      "name": "MBA Student 63",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA64",
+      "name": "MBA Student 64",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA65",
+      "name": "MBA Student 65",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA66",
+      "name": "MBA Student 66",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA67",
+      "name": "MBA Student 67",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA68",
+      "name": "MBA Student 68",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA69",
+      "name": "MBA Student 69",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA70",
+      "name": "MBA Student 70",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA71",
+      "name": "MBA Student 71",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA72",
+      "name": "MBA Student 72",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA73",
+      "name": "MBA Student 73",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA74",
+      "name": "MBA Student 74",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA75",
+      "name": "MBA Student 75",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA76",
+      "name": "MBA Student 76",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA77",
+      "name": "MBA Student 77",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA78",
+      "name": "MBA Student 78",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA79",
+      "name": "MBA Student 79",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA80",
+      "name": "MBA Student 80",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA81",
+      "name": "MBA Student 81",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA82",
+      "name": "MBA Student 82",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA83",
+      "name": "MBA Student 83",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA84",
+      "name": "MBA Student 84",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA85",
+      "name": "MBA Student 85",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA86",
+      "name": "MBA Student 86",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA87",
+      "name": "MBA Student 87",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA88",
+      "name": "MBA Student 88",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA89",
+      "name": "MBA Student 89",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA90",
+      "name": "MBA Student 90",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA91",
+      "name": "MBA Student 91",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA92",
+      "name": "MBA Student 92",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA93",
+      "name": "MBA Student 93",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA94",
+      "name": "MBA Student 94",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA95",
+      "name": "MBA Student 95",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA96",
+      "name": "MBA Student 96",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA97",
+      "name": "MBA Student 97",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA98",
+      "name": "MBA Student 98",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA99",
+      "name": "MBA Student 99",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA100",
+      "name": "MBA Student 100",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA101",
+      "name": "MBA Student 101",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA102",
+      "name": "MBA Student 102",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA103",
+      "name": "MBA Student 103",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA104",
+      "name": "MBA Student 104",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA105",
+      "name": "MBA Student 105",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA106",
+      "name": "MBA Student 106",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA107",
+      "name": "MBA Student 107",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA108",
+      "name": "MBA Student 108",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA109",
+      "name": "MBA Student 109",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA110",
+      "name": "MBA Student 110",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA111",
+      "name": "MBA Student 111",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA112",
+      "name": "MBA Student 112",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA113",
+      "name": "MBA Student 113",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA114",
+      "name": "MBA Student 114",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA115",
+      "name": "MBA Student 115",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA116",
+      "name": "MBA Student 116",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA117",
+      "name": "MBA Student 117",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA118",
+      "name": "MBA Student 118",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA119",
+      "name": "MBA Student 119",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA120",
+      "name": "MBA Student 120",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA121",
+      "name": "MBA Student 121",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA122",
+      "name": "MBA Student 122",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA123",
+      "name": "MBA Student 123",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA124",
+      "name": "MBA Student 124",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA125",
+      "name": "MBA Student 125",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA126",
+      "name": "MBA Student 126",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA127",
+      "name": "MBA Student 127",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA128",
+      "name": "MBA Student 128",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA129",
+      "name": "MBA Student 129",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA130",
+      "name": "MBA Student 130",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA131",
+      "name": "MBA Student 131",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA132",
+      "name": "MBA Student 132",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA133",
+      "name": "MBA Student 133",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA134",
+      "name": "MBA Student 134",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA135",
+      "name": "MBA Student 135",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA136",
+      "name": "MBA Student 136",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA137",
+      "name": "MBA Student 137",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA138",
+      "name": "MBA Student 138",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA139",
+      "name": "MBA Student 139",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA140",
+      "name": "MBA Student 140",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA141",
+      "name": "MBA Student 141",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA142",
+      "name": "MBA Student 142",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA143",
+      "name": "MBA Student 143",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA144",
+      "name": "MBA Student 144",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA145",
+      "name": "MBA Student 145",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA146",
+      "name": "MBA Student 146",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA147",
+      "name": "MBA Student 147",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA148",
+      "name": "MBA Student 148",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA149",
+      "name": "MBA Student 149",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA150",
+      "name": "MBA Student 150",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA151",
+      "name": "MBA Student 151",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA152",
+      "name": "MBA Student 152",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA153",
+      "name": "MBA Student 153",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA154",
+      "name": "MBA Student 154",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA155",
+      "name": "MBA Student 155",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA156",
+      "name": "MBA Student 156",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA157",
+      "name": "MBA Student 157",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA158",
+      "name": "MBA Student 158",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA159",
+      "name": "MBA Student 159",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA160",
+      "name": "MBA Student 160",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA161",
+      "name": "MBA Student 161",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA162",
+      "name": "MBA Student 162",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA163",
+      "name": "MBA Student 163",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA164",
+      "name": "MBA Student 164",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA165",
+      "name": "MBA Student 165",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA166",
+      "name": "MBA Student 166",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA167",
+      "name": "MBA Student 167",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA168",
+      "name": "MBA Student 168",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA169",
+      "name": "MBA Student 169",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA170",
+      "name": "MBA Student 170",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA171",
+      "name": "MBA Student 171",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA172",
+      "name": "MBA Student 172",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA173",
+      "name": "MBA Student 173",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA174",
+      "name": "MBA Student 174",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA175",
+      "name": "MBA Student 175",
+      "status": "active",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA176",
+      "name": "MBA Student 176",
+      "status": "active",
+      "created_at": "2026-09-23T14:36:49.315Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA177",
+      "name": "MBA Student 177",
+      "status": "active",
+      "created_at": "2026-09-23T14:36:49.315Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA178",
+      "name": "MBA Student 178",
+      "status": "active",
+      "created_at": "2026-09-23T14:36:49.315Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA179",
+      "name": "MBA Student 179",
+      "status": "active",
+      "created_at": "2026-09-23T14:36:49.315Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "25MBA180",
+      "name": "MBA Student 180",
+      "status": "active",
+      "created_at": "2026-09-23T14:36:49.315Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "roll_number": "24MBA01",
+      "name": "MBA Student (Y2) 01",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA02",
+      "name": "MBA Student (Y2) 02",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA03",
+      "name": "MBA Student (Y2) 03",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA04",
+      "name": "MBA Student (Y2) 04",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA05",
+      "name": "MBA Student (Y2) 05",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA06",
+      "name": "MBA Student (Y2) 06",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA07",
+      "name": "MBA Student (Y2) 07",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA08",
+      "name": "MBA Student (Y2) 08",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA09",
+      "name": "MBA Student (Y2) 09",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA10",
+      "name": "MBA Student (Y2) 10",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA11",
+      "name": "MBA Student (Y2) 11",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA12",
+      "name": "MBA Student (Y2) 12",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA13",
+      "name": "MBA Student (Y2) 13",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA14",
+      "name": "MBA Student (Y2) 14",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA15",
+      "name": "MBA Student (Y2) 15",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA16",
+      "name": "MBA Student (Y2) 16",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA17",
+      "name": "MBA Student (Y2) 17",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA18",
+      "name": "MBA Student (Y2) 18",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA19",
+      "name": "MBA Student (Y2) 19",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA20",
+      "name": "MBA Student (Y2) 20",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA21",
+      "name": "MBA Student (Y2) 21",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA22",
+      "name": "MBA Student (Y2) 22",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA23",
+      "name": "MBA Student (Y2) 23",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA24",
+      "name": "MBA Student (Y2) 24",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA25",
+      "name": "MBA Student (Y2) 25",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA26",
+      "name": "MBA Student (Y2) 26",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA27",
+      "name": "MBA Student (Y2) 27",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA28",
+      "name": "MBA Student (Y2) 28",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA29",
+      "name": "MBA Student (Y2) 29",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA30",
+      "name": "MBA Student (Y2) 30",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA31",
+      "name": "MBA Student (Y2) 31",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA32",
+      "name": "MBA Student (Y2) 32",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA33",
+      "name": "MBA Student (Y2) 33",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA34",
+      "name": "MBA Student (Y2) 34",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA35",
+      "name": "MBA Student (Y2) 35",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA36",
+      "name": "MBA Student (Y2) 36",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA37",
+      "name": "MBA Student (Y2) 37",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA38",
+      "name": "MBA Student (Y2) 38",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA39",
+      "name": "MBA Student (Y2) 39",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA40",
+      "name": "MBA Student (Y2) 40",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA41",
+      "name": "MBA Student (Y2) 41",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA42",
+      "name": "MBA Student (Y2) 42",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA43",
+      "name": "MBA Student (Y2) 43",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA44",
+      "name": "MBA Student (Y2) 44",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA45",
+      "name": "MBA Student (Y2) 45",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA46",
+      "name": "MBA Student (Y2) 46",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA47",
+      "name": "MBA Student (Y2) 47",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA48",
+      "name": "MBA Student (Y2) 48",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA49",
+      "name": "MBA Student (Y2) 49",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA50",
+      "name": "MBA Student (Y2) 50",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA51",
+      "name": "MBA Student (Y2) 51",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA52",
+      "name": "MBA Student (Y2) 52",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA53",
+      "name": "MBA Student (Y2) 53",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA54",
+      "name": "MBA Student (Y2) 54",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA55",
+      "name": "MBA Student (Y2) 55",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA56",
+      "name": "MBA Student (Y2) 56",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA57",
+      "name": "MBA Student (Y2) 57",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA58",
+      "name": "MBA Student (Y2) 58",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA59",
+      "name": "MBA Student (Y2) 59",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA60",
+      "name": "MBA Student (Y2) 60",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA61",
+      "name": "MBA Student (Y2) 61",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA62",
+      "name": "MBA Student (Y2) 62",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA63",
+      "name": "MBA Student (Y2) 63",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA64",
+      "name": "MBA Student (Y2) 64",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA65",
+      "name": "MBA Student (Y2) 65",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA66",
+      "name": "MBA Student (Y2) 66",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA67",
+      "name": "MBA Student (Y2) 67",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA68",
+      "name": "MBA Student (Y2) 68",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA69",
+      "name": "MBA Student (Y2) 69",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA70",
+      "name": "MBA Student (Y2) 70",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA71",
+      "name": "MBA Student (Y2) 71",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA72",
+      "name": "MBA Student (Y2) 72",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA73",
+      "name": "MBA Student (Y2) 73",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA74",
+      "name": "MBA Student (Y2) 74",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA75",
+      "name": "MBA Student (Y2) 75",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA76",
+      "name": "MBA Student (Y2) 76",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA77",
+      "name": "MBA Student (Y2) 77",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA78",
+      "name": "MBA Student (Y2) 78",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA79",
+      "name": "MBA Student (Y2) 79",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA80",
+      "name": "MBA Student (Y2) 80",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA81",
+      "name": "MBA Student (Y2) 81",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA82",
+      "name": "MBA Student (Y2) 82",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA83",
+      "name": "MBA Student (Y2) 83",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA84",
+      "name": "MBA Student (Y2) 84",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA85",
+      "name": "MBA Student (Y2) 85",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA86",
+      "name": "MBA Student (Y2) 86",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA87",
+      "name": "MBA Student (Y2) 87",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA88",
+      "name": "MBA Student (Y2) 88",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA89",
+      "name": "MBA Student (Y2) 89",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA90",
+      "name": "MBA Student (Y2) 90",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA91",
+      "name": "MBA Student (Y2) 91",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA92",
+      "name": "MBA Student (Y2) 92",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA93",
+      "name": "MBA Student (Y2) 93",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA94",
+      "name": "MBA Student (Y2) 94",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA95",
+      "name": "MBA Student (Y2) 95",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA96",
+      "name": "MBA Student (Y2) 96",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA97",
+      "name": "MBA Student (Y2) 97",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA98",
+      "name": "MBA Student (Y2) 98",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA99",
+      "name": "MBA Student (Y2) 99",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA100",
+      "name": "MBA Student (Y2) 100",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA101",
+      "name": "MBA Student (Y2) 101",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA102",
+      "name": "MBA Student (Y2) 102",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA103",
+      "name": "MBA Student (Y2) 103",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA104",
+      "name": "MBA Student (Y2) 104",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA105",
+      "name": "MBA Student (Y2) 105",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA106",
+      "name": "MBA Student (Y2) 106",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA107",
+      "name": "MBA Student (Y2) 107",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA108",
+      "name": "MBA Student (Y2) 108",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA109",
+      "name": "MBA Student (Y2) 109",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA110",
+      "name": "MBA Student (Y2) 110",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA111",
+      "name": "MBA Student (Y2) 111",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA112",
+      "name": "MBA Student (Y2) 112",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA113",
+      "name": "MBA Student (Y2) 113",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA114",
+      "name": "MBA Student (Y2) 114",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA115",
+      "name": "MBA Student (Y2) 115",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA116",
+      "name": "MBA Student (Y2) 116",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA117",
+      "name": "MBA Student (Y2) 117",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA118",
+      "name": "MBA Student (Y2) 118",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA119",
+      "name": "MBA Student (Y2) 119",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA120",
+      "name": "MBA Student (Y2) 120",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA121",
+      "name": "MBA Student (Y2) 121",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA122",
+      "name": "MBA Student (Y2) 122",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA123",
+      "name": "MBA Student (Y2) 123",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA124",
+      "name": "MBA Student (Y2) 124",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA125",
+      "name": "MBA Student (Y2) 125",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA126",
+      "name": "MBA Student (Y2) 126",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA127",
+      "name": "MBA Student (Y2) 127",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA128",
+      "name": "MBA Student (Y2) 128",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA129",
+      "name": "MBA Student (Y2) 129",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA130",
+      "name": "MBA Student (Y2) 130",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA131",
+      "name": "MBA Student (Y2) 131",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA132",
+      "name": "MBA Student (Y2) 132",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA133",
+      "name": "MBA Student (Y2) 133",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA134",
+      "name": "MBA Student (Y2) 134",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA135",
+      "name": "MBA Student (Y2) 135",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA136",
+      "name": "MBA Student (Y2) 136",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA137",
+      "name": "MBA Student (Y2) 137",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA138",
+      "name": "MBA Student (Y2) 138",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA139",
+      "name": "MBA Student (Y2) 139",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA140",
+      "name": "MBA Student (Y2) 140",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA141",
+      "name": "MBA Student (Y2) 141",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA142",
+      "name": "MBA Student (Y2) 142",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA143",
+      "name": "MBA Student (Y2) 143",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA144",
+      "name": "MBA Student (Y2) 144",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA145",
+      "name": "MBA Student (Y2) 145",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA146",
+      "name": "MBA Student (Y2) 146",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA147",
+      "name": "MBA Student (Y2) 147",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA148",
+      "name": "MBA Student (Y2) 148",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA149",
+      "name": "MBA Student (Y2) 149",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA150",
+      "name": "MBA Student (Y2) 150",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA151",
+      "name": "MBA Student (Y2) 151",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA152",
+      "name": "MBA Student (Y2) 152",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA153",
+      "name": "MBA Student (Y2) 153",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA154",
+      "name": "MBA Student (Y2) 154",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA155",
+      "name": "MBA Student (Y2) 155",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA156",
+      "name": "MBA Student (Y2) 156",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA157",
+      "name": "MBA Student (Y2) 157",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA158",
+      "name": "MBA Student (Y2) 158",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA159",
+      "name": "MBA Student (Y2) 159",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA160",
+      "name": "MBA Student (Y2) 160",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA161",
+      "name": "MBA Student (Y2) 161",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA162",
+      "name": "MBA Student (Y2) 162",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA163",
+      "name": "MBA Student (Y2) 163",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA164",
+      "name": "MBA Student (Y2) 164",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA165",
+      "name": "MBA Student (Y2) 165",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA166",
+      "name": "MBA Student (Y2) 166",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA167",
+      "name": "MBA Student (Y2) 167",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA168",
+      "name": "MBA Student (Y2) 168",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA169",
+      "name": "MBA Student (Y2) 169",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA170",
+      "name": "MBA Student (Y2) 170",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA171",
+      "name": "MBA Student (Y2) 171",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA172",
+      "name": "MBA Student (Y2) 172",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA173",
+      "name": "MBA Student (Y2) 173",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA174",
+      "name": "MBA Student (Y2) 174",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "24MBA175",
+      "name": "MBA Student (Y2) 175",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "batch": "2024-2026",
+      "status": "active",
+      "created_at": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "roll_number": "25MBA250",
+      "name": "MBA Student 25MBA250",
+      "year": "Year 1",
+      "semester": "Semester 2",
+      "batch": "2025-2027",
+      "status": "active",
+      "created_at": "2026-09-23T14:59:19.978Z"
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "title": "Marketing Management - Units 1 to 5 Complete Guide",
+      "subject": "Marketing Management",
+      "course_code": "MBA201",
+      "semester": "Semester 2",
+      "description": "Covers STP framework, 7Ps of Services Marketing, Brand Equity Models, Digital Marketing channels, and real-world consumer behavior case studies.",
+      "file_name": "mba_marketing_management_unit1-5.pdf",
+      "file_path": "/app/applet/uploads/mba_marketing_management_unit1-5.pdf",
+      "file_size": 2450000,
+      "download_count": 142,
+      "uploaded_by": "MBA Department Admin",
+      "created_at": "2026-02-10T10:00:00.000Z",
+      "year": "Year 1"
+    },
+    {
+      "id": 2,
+      "title": "Financial Management - Capital Budgeting & Valuation",
+      "subject": "Financial Management",
+      "course_code": "MBA202",
+      "semester": "Semester 2",
+      "description": "Comprehensive formulas and solved problems on NPV, IRR, WACC, Capital Structure (Modigliani-Miller), and working capital forecasting.",
+      "file_name": "mba_financial_management_core.pdf",
+      "file_path": "/app/applet/uploads/mba_financial_management_core.pdf",
+      "file_size": 3120000,
+      "download_count": 168,
+      "uploaded_by": "Prof. Finance Coordinator",
+      "created_at": "2026-02-14T11:30:00.000Z",
+      "year": "Year 1"
+    },
+    {
+      "id": 3,
+      "title": "Human Resource Management & Organizational Behavior",
+      "subject": "Human Resource Management",
+      "course_code": "MBA203",
+      "semester": "Semester 2",
+      "description": "Talent acquisition strategies, 360-degree KPI evaluation, Herzberg dual-factor motivation theory, and organizational culture transformation frameworks.",
+      "file_name": "mba_human_resource_mgmt.pdf",
+      "file_path": "/app/applet/uploads/mba_human_resource_mgmt.pdf",
+      "file_size": 1980000,
+      "download_count": 95,
+      "uploaded_by": "MBA Department Admin",
+      "created_at": "2026-02-20T14:15:00.000Z",
+      "year": "Year 1"
+    },
+    {
+      "id": 4,
+      "title": "Operations & Supply Chain Management Handbook",
+      "subject": "Operations & Supply Chain",
+      "course_code": "MBA204",
+      "semester": "Semester 2",
+      "description": "Six Sigma DMAIC cycle, EOQ inventory models, Lean manufacturing, Aggregate planning, and global supply chain logistics case studies.",
+      "file_name": "mba_operations_supply_chain.pdf",
+      "file_path": "/app/applet/uploads/mba_operations_supply_chain.pdf",
+      "file_size": 2850000,
+      "download_count": 110,
+      "uploaded_by": "Prof. Operations Head",
+      "created_at": "2026-02-25T16:00:00.000Z",
+      "year": "Year 1"
+    },
+    {
+      "id": 5,
+      "title": "Business Analytics & Predictive Modeling",
+      "subject": "Business Analytics",
+      "course_code": "MBA205",
+      "semester": "Semester 2",
+      "description": "Regression analysis, Decision Trees, Confusion Matrix, ROI optimization models, and PowerBI business dashboard design techniques.",
+      "file_name": "mba_business_analytics_python.pdf",
+      "file_path": "/app/applet/uploads/mba_business_analytics_python.pdf",
+      "file_size": 3450000,
+      "download_count": 183,
+      "uploaded_by": "Analytics Lab Director",
+      "created_at": "2026-03-01T09:45:00.000Z",
+      "year": "Year 1"
+    },
+    {
+      "id": 6,
+      "title": "Strategic Management & Competitive Advantage",
+      "subject": "Strategic Management",
+      "course_code": "MBA206",
+      "semester": "Semester 2",
+      "description": "Porter’s Five Forces, Blue Ocean Strategy, BCG Growth-Share Matrix, Core Competencies analysis, and M&A corporate strategy.",
+      "file_name": "mba_strategic_management_frameworks.pdf",
+      "file_path": "/app/applet/uploads/mba_strategic_management_frameworks.pdf",
+      "file_size": 2200000,
+      "download_count": 129,
+      "uploaded_by": "MBA Department Admin",
+      "created_at": "2026-03-05T13:20:00.000Z",
+      "year": "Year 1"
+    },
+    {
+      "id": 101,
+      "title": "Principles of Management & Organization Dynamics",
+      "subject": "Principles of Management",
+      "course_code": "MBA101",
+      "year": "Year 1",
+      "semester": "Semester 1",
+      "description": "Covers core managerial functions (Planning, Organizing, Staffing, Leading, Controlling), Classical and Modern management theories, and organizational structures.",
+      "file_name": "mba_sem1_principles_of_management.pdf",
+      "file_path": "/app/applet/uploads/mba_sem1_principles_of_management.pdf",
+      "file_size": 1950000,
+      "download_count": 156,
+      "uploaded_by": "MBA Academic Office",
+      "created_at": "2026-01-15T10:00:00.000Z"
+    },
+    {
+      "id": 102,
+      "title": "Managerial Economics & Demand Forecasting",
+      "subject": "Managerial Economics",
+      "course_code": "MBA102",
+      "year": "Year 1",
+      "semester": "Semester 1",
+      "description": "Microeconomic foundations for business decision making: Elasticity of demand, Cost-Volume-Profit analysis, Oligopoly models, and Game Theory fundamentals.",
+      "file_name": "mba_sem1_managerial_economics.pdf",
+      "file_path": "/app/applet/uploads/mba_sem1_managerial_economics.pdf",
+      "file_size": 2180000,
+      "download_count": 140,
+      "uploaded_by": "Economics Faculty",
+      "created_at": "2026-01-18T11:00:00.000Z"
+    },
+    {
+      "id": 103,
+      "title": "Accounting for Decision Making & Balance Sheet Analysis",
+      "subject": "Financial Accounting",
+      "course_code": "MBA103",
+      "year": "Year 1",
+      "semester": "Semester 1",
+      "description": "Financial statement preparation, GAAP vs IFRS accounting standards, Cash Flow statement modeling, liquidity & solvency ratio analysis.",
+      "file_name": "mba_sem1_financial_accounting.pdf",
+      "file_path": "/app/applet/uploads/mba_sem1_financial_accounting.pdf",
+      "file_size": 2840000,
+      "download_count": 198,
+      "uploaded_by": "Prof. Accounting Coordinator",
+      "created_at": "2026-01-20T12:00:00.000Z"
+    },
+    {
+      "id": 201,
+      "title": "Corporate Finance, Mergers & Acquisitions Valuation",
+      "subject": "Financial Management",
+      "course_code": "MBA301",
+      "year": "Year 2",
+      "semester": "Semester 3",
+      "description": "Advanced financial valuation methodologies, Due Diligence checklists, Synergy calculation in M&A, Leveraged Buyouts (LBO), and hostile takeover defenses.",
+      "file_name": "mba_sem3_mergers_acquisitions.pdf",
+      "file_path": "/app/applet/uploads/mba_sem3_mergers_acquisitions.pdf",
+      "file_size": 3100000,
+      "download_count": 145,
+      "uploaded_by": "Prof. Ananya Sen",
+      "created_at": "2026-03-10T10:00:00.000Z"
+    },
+    {
+      "id": 202,
+      "title": "Digital Marketing & Omni-Channel Strategy",
+      "subject": "Marketing Management",
+      "course_code": "MBA302",
+      "year": "Year 2",
+      "semester": "Semester 3",
+      "description": "Search engine marketing, conversion rate optimization, programmatic advertising, social commerce analytics, and mobile customer journey mapping.",
+      "file_name": "mba_sem3_digital_marketing_strategy.pdf",
+      "file_path": "/app/applet/uploads/mba_sem3_digital_marketing_strategy.pdf",
+      "file_size": 2600000,
+      "download_count": 167,
+      "uploaded_by": "Dr. Rajesh Nair",
+      "created_at": "2026-03-12T11:00:00.000Z"
+    },
+    {
+      "id": 203,
+      "title": "Global Supply Chain Logistics & Analytics",
+      "subject": "Operations & Supply Chain",
+      "course_code": "MBA303",
+      "year": "Year 2",
+      "semester": "Semester 3",
+      "description": "Container shipping economics, customs & tariff optimization, automated fulfillment centers, AI routing, and resilient supply chain architectures.",
+      "file_name": "mba_sem3_supply_chain_analytics.pdf",
+      "file_path": "/app/applet/uploads/mba_sem3_supply_chain_analytics.pdf",
+      "file_size": 2900000,
+      "download_count": 138,
+      "uploaded_by": "Dr. Vikramaditya K.",
+      "created_at": "2026-03-14T14:00:00.000Z"
+    },
+    {
+      "id": 301,
+      "title": "Entrepreneurship & Venture Capital Financing",
+      "subject": "Entrepreneurship",
+      "course_code": "MBA401",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "description": "Incubation models, venture funding stages (Pre-seed to Series C), cap table modeling, term sheet negotiation, and IPO exit strategies.",
+      "file_name": "mba_sem4_entrepreneurship_venture.pdf",
+      "file_path": "/app/applet/uploads/mba_sem4_entrepreneurship_venture.pdf",
+      "file_size": 2750000,
+      "download_count": 182,
+      "uploaded_by": "Incubation Cell Lead",
+      "created_at": "2026-03-16T15:30:00.000Z"
+    },
+    {
+      "id": 302,
+      "title": "Corporate Governance & ESG Compliance Reporting",
+      "subject": "Business Ethics & ESG",
+      "course_code": "MBA403",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "description": "Board independence, audit committee oversight, sustainability reporting under BRSR and GRI, carbon accounting, and ethical leadership.",
+      "file_name": "mba_sem4_esg_corporate_governance.pdf",
+      "file_path": "/app/applet/uploads/mba_sem4_esg_corporate_governance.pdf",
+      "file_size": 2350000,
+      "download_count": 124,
+      "uploaded_by": "MBA Department Admin",
+      "created_at": "2026-03-18T10:00:00.000Z"
+    }
+  ],
+  "assignments": [
+    {
+      "id": 1,
+      "title": "Marketing Strategy Case Study: Omnichannel Retail Launch",
+      "subject": "Marketing Management",
+      "faculty": "Dr. Rajesh Nair",
+      "due_date": "2026-10-15",
+      "max_marks": 25,
+      "status": "Open",
+      "description": "Analyze the retail expansion case study provided. Prepare a 5-page report detailing the STP strategy, promotional budget allocation, and digital acquisition channels for an Indian consumer brand.",
+      "submission_info": "Submit written PDF report through college portal or email to r.nair@collegenotes.edu by 11:59 PM.",
+      "created_at": "2026-09-18T10:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 2,
+      "title": "Corporate Valuation & DCF Financial Modeling Exercise",
+      "subject": "Financial Management",
+      "faculty": "Prof. Ananya Sen",
+      "due_date": "2026-10-20",
+      "max_marks": 30,
+      "status": "Open",
+      "description": "Construct a 5-year discounted cash flow (DCF) model in Excel for the sample manufacturing company dataset. Calculate WACC, Terminal Value, and sensitivity analysis under varying growth rates.",
+      "submission_info": "Submit working .xlsx file and a 2-page executive summary by October 20th.",
+      "created_at": "2026-09-20T11:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 3,
+      "title": "Supply Chain Optimization & Warehouse Layout Simulation",
+      "subject": "Operations & Supply Chain",
+      "faculty": "Dr. Vikramaditya K.",
+      "due_date": "2026-10-25",
+      "max_marks": 20,
+      "status": "Open",
+      "description": "Formulate an EOQ inventory policy considering holding costs and stockout penalties. Present layout recommendations to minimize picking transit time by 15%.",
+      "submission_info": "Group submission (max 3 students per team). Submit hardcopy and softcopy.",
+      "created_at": "2026-09-21T14:30:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 4,
+      "title": "HR Performance Appraisal Design & Retention Strategy",
+      "subject": "Human Resource Management",
+      "faculty": "Prof. Meera Deshmukh",
+      "due_date": "2026-10-08",
+      "max_marks": 25,
+      "status": "Urgent",
+      "description": "Design a modernized 360-degree performance appraisal framework for a tech enterprise experiencing 22% attrition. Detail non-monetary incentives and mentorship programs.",
+      "submission_info": "Submit via LMS before midnight of October 8th.",
+      "created_at": "2026-09-22T08:00:00.000Z",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 101,
+      "title": "Financial Statement Analysis & Ratio Modeling Project",
+      "subject": "Financial Accounting",
+      "year": "Year 1",
+      "semester": "Semester 1",
+      "faculty": "Prof. Accounting Coordinator",
+      "due_date": "2026-10-10",
+      "max_marks": 25,
+      "status": "Open",
+      "description": "Select an NSE/BSE listed company. Compute 3 years of liquidity, solvency, and profitability ratios. Draft a comparative performance review.",
+      "submission_info": "Submit Excel workbook and PDF synthesis report via LMS.",
+      "created_at": "2026-09-15T09:00:00.000Z"
+    },
+    {
+      "id": 201,
+      "title": "Mergers & Acquisitions Valuation Report: Tech Conglomerate",
+      "subject": "Financial Management",
+      "year": "Year 2",
+      "semester": "Semester 3",
+      "faculty": "Prof. Ananya Sen",
+      "due_date": "2026-10-18",
+      "max_marks": 30,
+      "status": "Open",
+      "description": "Conduct a comprehensive takeover valuation including synergy estimates, exchange ratio computation, and EPS accretion/dilution analysis.",
+      "submission_info": "Submit report and supporting Excel valuation model.",
+      "created_at": "2026-09-22T10:00:00.000Z"
+    },
+    {
+      "id": 301,
+      "title": "Venture Capital Pitch Deck & Term Sheet Simulation",
+      "subject": "Entrepreneurship",
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "faculty": "Dr. S. Kulkarni",
+      "due_date": "2026-10-30",
+      "max_marks": 35,
+      "status": "Open",
+      "description": "Develop a 12-slide investor pitch deck for an innovative business model with financial projections, unit economics, and required funding ask.",
+      "submission_info": "Present deck in pitch room and submit PDF.",
+      "created_at": "2026-09-22T12:00:00.000Z"
+    }
+  ],
+  "timetable": [
+    {
+      "id": 1,
+      "day": "Monday",
+      "time": "09:00 AM - 10:30 AM",
+      "subject": "Marketing Management",
+      "course_code": "MBA201",
+      "faculty": "Dr. Rajesh Nair",
+      "room": "Hall A-101",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 2,
+      "day": "Monday",
+      "time": "10:45 AM - 12:15 PM",
+      "subject": "Financial Management",
+      "course_code": "MBA202",
+      "faculty": "Prof. Ananya Sen",
+      "room": "Hall A-101",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 3,
+      "day": "Monday",
+      "time": "01:15 PM - 02:45 PM",
+      "subject": "Operations & Supply Chain",
+      "course_code": "MBA204",
+      "faculty": "Dr. Vikramaditya K.",
+      "room": "Hall B-204",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 4,
+      "day": "Monday",
+      "time": "03:00 PM - 04:30 PM",
+      "subject": "Business Analytics Lab",
+      "course_code": "MBA205",
+      "faculty": "Prof. Amit Sharma",
+      "room": "Computer Lab 3",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 5,
+      "day": "Tuesday",
+      "time": "09:00 AM - 10:30 AM",
+      "subject": "Human Resource Management",
+      "course_code": "MBA203",
+      "faculty": "Prof. Meera Deshmukh",
+      "room": "Hall A-101",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 6,
+      "day": "Tuesday",
+      "time": "10:45 AM - 12:15 PM",
+      "subject": "Strategic Management",
+      "course_code": "MBA206",
+      "faculty": "Dr. Harish Varma",
+      "room": "Hall A-101",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 7,
+      "day": "Tuesday",
+      "time": "01:15 PM - 02:45 PM",
+      "subject": "Financial Management Tutorial",
+      "course_code": "MBA202",
+      "faculty": "Prof. Ananya Sen",
+      "room": "Seminar Room 2",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 8,
+      "day": "Tuesday",
+      "time": "03:00 PM - 04:30 PM",
+      "subject": "Guest Lecture / Industry Connect",
+      "course_code": "MBA-IND",
+      "faculty": "Visiting Executive",
+      "room": "Auditorium",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 9,
+      "day": "Wednesday",
+      "time": "09:00 AM - 10:30 AM",
+      "subject": "Operations & Supply Chain",
+      "course_code": "MBA204",
+      "faculty": "Dr. Vikramaditya K.",
+      "room": "Hall B-204",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 10,
+      "day": "Wednesday",
+      "time": "10:45 AM - 12:15 PM",
+      "subject": "Marketing Management",
+      "course_code": "MBA201",
+      "faculty": "Dr. Rajesh Nair",
+      "room": "Hall A-101",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 11,
+      "day": "Wednesday",
+      "time": "01:15 PM - 02:45 PM",
+      "subject": "Business Analytics",
+      "course_code": "MBA205",
+      "faculty": "Prof. Amit Sharma",
+      "room": "Computer Lab 3",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 12,
+      "day": "Wednesday",
+      "time": "03:00 PM - 04:30 PM",
+      "subject": "Entrepreneurship & Innovation",
+      "course_code": "MBA207",
+      "faculty": "Dr. S. Kulkarni",
+      "room": "Incubation Cell",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 13,
+      "day": "Thursday",
+      "time": "09:00 AM - 10:30 AM",
+      "subject": "Financial Management",
+      "course_code": "MBA202",
+      "faculty": "Prof. Ananya Sen",
+      "room": "Hall A-101",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 14,
+      "day": "Thursday",
+      "time": "10:45 AM - 12:15 PM",
+      "subject": "Human Resource Management",
+      "course_code": "MBA203",
+      "faculty": "Prof. Meera Deshmukh",
+      "room": "Hall A-101",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 15,
+      "day": "Thursday",
+      "time": "01:15 PM - 02:45 PM",
+      "subject": "Strategic Management",
+      "course_code": "MBA206",
+      "faculty": "Dr. Harish Varma",
+      "room": "Hall B-204",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 16,
+      "day": "Thursday",
+      "time": "03:00 PM - 04:30 PM",
+      "subject": "Case Study Presentation Session",
+      "course_code": "MBA-CS",
+      "faculty": "Faculty Panel",
+      "room": "Hall A-101",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 17,
+      "day": "Friday",
+      "time": "09:00 AM - 10:30 AM",
+      "subject": "Business Analytics & Modeling",
+      "course_code": "MBA205",
+      "faculty": "Prof. Amit Sharma",
+      "room": "Computer Lab 3",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 18,
+      "day": "Friday",
+      "time": "10:45 AM - 12:15 PM",
+      "subject": "Marketing Management Workshop",
+      "course_code": "MBA201",
+      "faculty": "Dr. Rajesh Nair",
+      "room": "Hall A-101",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 19,
+      "day": "Friday",
+      "time": "01:15 PM - 02:45 PM",
+      "subject": "Operations Simulation Lab",
+      "course_code": "MBA204",
+      "faculty": "Dr. Vikramaditya K.",
+      "room": "Computer Lab 2",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 20,
+      "day": "Friday",
+      "time": "03:00 PM - 04:30 PM",
+      "subject": "Mentorship & Placement Prep",
+      "course_code": "MBA-CDC",
+      "faculty": "Placement Cell",
+      "room": "Auditorium",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 21,
+      "day": "Saturday",
+      "time": "09:30 AM - 11:30 AM",
+      "subject": "Leadership & Business Ethics Seminar",
+      "course_code": "MBA208",
+      "faculty": "Prof. Meera Deshmukh",
+      "room": "Conference Hall",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 22,
+      "day": "Saturday",
+      "time": "11:45 AM - 01:15 PM",
+      "subject": "Live Project / Dissertation Review",
+      "course_code": "MBA-PROJ",
+      "faculty": "Faculty Guides",
+      "room": "Seminar Rooms",
+      "year": "Year 1",
+      "semester": "Semester 2"
+    },
+    {
+      "id": 31,
+      "year": "Year 2",
+      "semester": "Semester 3",
+      "day": "Monday",
+      "time": "09:00 AM - 10:30 AM",
+      "subject": "Corporate Finance & M&A",
+      "course_code": "MBA301",
+      "faculty": "Prof. Ananya Sen",
+      "room": "Hall C-301"
+    },
+    {
+      "id": 32,
+      "year": "Year 2",
+      "semester": "Semester 3",
+      "day": "Monday",
+      "time": "10:45 AM - 12:15 PM",
+      "subject": "Digital Marketing & Social Commerce",
+      "course_code": "MBA302",
+      "faculty": "Dr. Rajesh Nair",
+      "room": "Hall C-301"
+    },
+    {
+      "id": 33,
+      "year": "Year 2",
+      "semester": "Semester 3",
+      "day": "Monday",
+      "time": "01:15 PM - 02:45 PM",
+      "subject": "Supply Chain Analytics",
+      "course_code": "MBA303",
+      "faculty": "Dr. Vikramaditya K.",
+      "room": "Hall C-301"
+    },
+    {
+      "id": 41,
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "day": "Tuesday",
+      "time": "09:00 AM - 10:30 AM",
+      "subject": "Entrepreneurship & Venture Capital",
+      "course_code": "MBA401",
+      "faculty": "Dr. S. Kulkarni",
+      "room": "Incubation Hub"
+    },
+    {
+      "id": 42,
+      "year": "Year 2",
+      "semester": "Semester 4",
+      "day": "Tuesday",
+      "time": "10:45 AM - 12:15 PM",
+      "subject": "Corporate Governance & ESG",
+      "course_code": "MBA403",
+      "faculty": "Prof. Meera Deshmukh",
+      "room": "Conference Room 2"
+    }
+  ],
+  "announcements": [
+    {
+      "id": 1,
+      "title": "Mid-Term Examination Schedule Announced (Semester 2)",
+      "category": "Exam",
+      "priority": "urgent",
+      "date": "2026-09-22",
+      "author": "Controller of Examinations",
+      "content": "Mid-term exams for all MBA Sem 2 subjects will commence from October 28, 2026. Detailed seating arrangement and hall tickets will be uploaded here next week. All students must bring valid college ID."
+    },
+    {
+      "id": 2,
+      "title": "Summer Internship Placement Drive: Top Consulting & FMCG Firms",
+      "category": "Placement",
+      "priority": "urgent",
+      "date": "2026-09-20",
+      "author": "Corporate Relations & Placement Cell",
+      "content": "Registration is now open for the upcoming MBA Summer Internship Season. Eligible students from 25MBA01 to 25MBA175 must ensure their resumes are verified by the placement committee before October 5th."
+    },
+    {
+      "id": 3,
+      "title": "Guest Lecture on \"Generative AI in Corporate Finance & Fintech\"",
+      "category": "Academic",
+      "priority": "normal",
+      "date": "2026-09-19",
+      "author": "Department of Management Studies",
+      "content": "Join us this Tuesday at 3:00 PM in the Main Auditorium for an exclusive masterclass with VP of FinTech Strategy, Goldman Sachs. Attendance is mandatory for all finance & analytics elective students."
+    },
+    {
+      "id": 4,
+      "title": "Library Extended Hours During Assessment Week",
+      "category": "Notice",
+      "priority": "normal",
+      "date": "2026-09-17",
+      "author": "Chief Librarian",
+      "content": "The Central MBA Reference Library and digital reading rooms will remain open until 11:00 PM on weekdays starting next Monday. Wi-Fi and digital journal access (EBSCO, Harvard Business Review) are active."
+    }
+  ],
+  "nextIds": {
+    "notes": 7,
+    "assignments": 5,
+    "timetable": 23,
+    "announcements": 5
+  }
+}

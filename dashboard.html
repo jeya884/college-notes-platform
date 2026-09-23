@@ -3,101 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Dashboard - College Notes</title>
+    <title>Student Portal - College Notes Platform</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">📚 College Notes</div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <button id="logoutBtn" class="nav-btn">🚪 Logout</button>
+            <a href="/" class="logo-wrap">
+                <span class="logo-badge">MBA</span>
+                <div class="logo-text">
+                    <h1>College Notes Platform</h1>
+                    <p>Department of Management Studies</p>
+                </div>
+            </a>
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <a href="/" class="btn btn-outline btn-sm">Home</a>
+                <button onclick="window.API.logout()" class="btn btn-secondary btn-sm">Logout</button>
             </div>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="dashboard-layout">
-            <!-- Sidebar -->
-            <aside class="dashboard-sidebar">
-                <h3>My Menu</h3>
-                <ul>
-                    <li><a href="#" class="sidebar-link active" data-tab="profile">👤 Profile</a></li>
-                    <li><a href="#" class="sidebar-link" data-tab="downloads">📥 My Downloads</a></li>
-                    <li><a href="#" class="sidebar-link" data-tab="uploads">📤 My Uploads</a></li>
-                    <li><a href="#" class="sidebar-link" data-tab="favorites">❤️ Favorites</a></li>
-                    <li><a href="#" class="sidebar-link" data-tab="settings">⚙️ Settings</a></li>
-                </ul>
-            </aside>
+    <div class="main-content">
+        <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <span class="user-role-tag role-student" style="font-size: 0.85rem; padding: 4px 10px;">👨‍🎓 Active Student Account</span>
+                    <h2 id="dashRollNo" style="font-size: 1.8rem; color: #0f172a; margin-top: 0.5rem; font-weight: 800;">Loading...</h2>
+                    <p style="color: #64748b; font-size: 0.9rem;">Batch 2025-2027 &bull; Master of Business Administration</p>
+                </div>
+                <div>
+                    <a href="/" class="btn btn-primary">Go to Academic Hub</a>
+                </div>
+            </div>
+        </div>
 
-            <!-- Main Content -->
-            <main class="dashboard-main">
-                <!-- Profile Tab -->
-                <section id="profile" class="dashboard-tab active">
-                    <h2>My Profile</h2>
-                    <div class="profile-card">
-                        <div class="profile-info">
-                            <p><strong>Name:</strong> <span id="profileName"></span></p>
-                            <p><strong>Email:</strong> <span id="profileEmail"></span></p>
-                            <p><strong>Role:</strong> <span id="profileRole"></span></p>
-                            <p><strong>Member Since:</strong> <span id="profileDate"></span></p>
-                        </div>
-                    </div>
-                </section>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow);">
+                <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">📚</div>
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem;">MBA Lecture Notes</h3>
+                <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1rem;">Download course handouts, case studies, formulas, and presentations for all subjects.</p>
+                <a href="/#notes" onclick="window.location.href='/?tab=notes'" class="btn btn-outline btn-sm">Browse Notes &rarr;</a>
+            </div>
 
-                <!-- Downloads Tab -->
-                <section id="downloads" class="dashboard-tab">
-                    <h2>My Downloads</h2>
-                    <div id="downloadsList" class="notes-grid">
-                        <!-- Downloads will be loaded here -->
-                    </div>
-                </section>
+            <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow);">
+                <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">📝</div>
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem;">Course Assignments</h3>
+                <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1rem;">Check assignment briefs, submission deadlines, and evaluation weightages.</p>
+                <a href="/#assignments" onclick="window.location.href='/?tab=assignments'" class="btn btn-outline btn-sm">View Assignments &rarr;</a>
+            </div>
 
-                <!-- Uploads Tab -->
-                <section id="uploads" class="dashboard-tab">
-                    <h2>My Uploads</h2>
-                    <div id="uploadsList" class="notes-grid">
-                        <!-- Uploads will be loaded here -->
-                    </div>
-                </section>
-
-                <!-- Favorites Tab -->
-                <section id="favorites" class="dashboard-tab">
-                    <h2>My Favorites</h2>
-                    <div id="favoritesList" class="notes-grid">
-                        <!-- Favorites will be loaded here -->
-                    </div>
-                </section>
-
-                <!-- Settings Tab -->
-                <section id="settings" class="dashboard-tab">
-                    <h2>Settings</h2>
-                    <form id="settingsForm" class="settings-form">
-                        <div class="form-group">
-                            <label for="displayName">Display Name</label>
-                            <input type="text" id="displayName" placeholder="Your display name">
-                        </div>
-                        <div class="form-group">
-                            <label for="newPassword">New Password (leave empty to keep current)</label>
-                            <input type="password" id="newPassword" placeholder="New password">
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                <input type="checkbox" id="notifEmail"> Email me about new notes in my categories
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">💾 Save Settings</button>
-                        <div id="settingsMessage" class="message"></div>
-                    </form>
-                </section>
-            </main>
+            <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow);">
+                <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">📅</div>
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem;">Weekly Timetable</h3>
+                <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1rem;">View Monday through Saturday lecture schedules, faculty names, and hall allocations.</p>
+                <a href="/#timetable" onclick="window.location.href='/?tab=timetable'" class="btn btn-outline btn-sm">Check Timetable &rarr;</a>
+            </div>
         </div>
     </div>
 
     <script src="js/api.js"></script>
-    <script src="js/dashboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = window.API.getCurrentUser();
+            if (!user) {
+                window.location.href = '/login';
+                return;
+            }
+            document.getElementById('dashRollNo').textContent = user.rollNumber || user.name;
+        });
+    </script>
 </body>
 </html>

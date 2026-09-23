@@ -5,59 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - College Notes Platform</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .login-page-wrap {
+            max-width: 480px;
+            margin: 4rem auto;
+            padding: 2.2rem;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
+    </style>
 </head>
-<body>
+<body style="background-color: #f1f5f9;">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">📚 College Notes</a>
+            <a href="/" class="logo-wrap">
+                <span class="logo-badge">MBA</span>
+                <div class="logo-text">
+                    <h1>College Notes Platform</h1>
+                    <p>Department of Management Studies</p>
+                </div>
+            </a>
+            <div>
+                <a href="/" class="btn btn-outline btn-sm">&larr; Back to Home</a>
+            </div>
         </div>
     </nav>
 
-    <div class="container">
-        <section class="auth-section">
-            <div class="auth-card">
-                <h1>Login</h1>
-                <form id="loginForm">
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" required placeholder="your@email.com">
+    <div class="login-page-wrap">
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+            <h2 style="font-size: 1.6rem; color: #0f172a; font-weight: 800;">Academic Portal Sign In</h2>
+            <p style="font-size: 0.88rem; color: #64748b; margin-top: 0.25rem;">Choose your account type to proceed</p>
+        </div>
+
+        <div class="auth-tabs">
+            <button class="auth-tab-btn active" id="tabBtnStudent" onclick="switchLoginMode('student')">👨‍🎓 Student Login</button>
+            <button class="auth-tab-btn" id="tabBtnAdmin" onclick="switchLoginMode('admin')">🛡️ Admin Login</button>
+        </div>
+
+        <!-- Student Login -->
+        <div id="studentLoginBox">
+            <form id="pageStudentForm">
+                <div class="form-group">
+                    <label for="pageStudentRoll">Roll Number (User ID)</label>
+                    <input type="text" id="pageStudentRoll" class="form-control" placeholder="e.g. 25MBA01" required autofocus>
+                    <p class="form-help">Valid IDs: 25MBA01 to 25MBA175</p>
+                </div>
+                <div class="form-group">
+                    <label for="pageStudentPass">Password</label>
+                    <input type="password" id="pageStudentPass" class="form-control" placeholder="Same as Roll Number (e.g. 25MBA01)" required>
+                    <p class="form-help">Your password is identical to your Roll Number.</p>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem;">
+                    Sign In as Student
+                </button>
+
+                <div style="margin-top: 1.25rem; padding: 0.75rem; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 6px; font-size: 0.82rem; color: #475569;">
+                    <strong>Quick Fill Test Accounts:</strong>
+                    <div style="display: flex; gap: 0.4rem; margin-top: 0.4rem; flex-wrap: wrap;">
+                        <button type="button" onclick="fillTestStudent('25MBA01')" class="btn btn-outline btn-sm">25MBA01</button>
+                        <button type="button" onclick="fillTestStudent('25MBA15')" class="btn btn-outline btn-sm">25MBA15</button>
+                        <button type="button" onclick="fillTestStudent('25MBA175')" class="btn btn-outline btn-sm">25MBA175</button>
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" required placeholder="Enter your password">
-                    </div>
-                    <button type="submit" class="btn btn-primary full-width">🔑 Login</button>
-                    <div id="loginMessage" class="message"></div>
-                </form>
-                <p class="auth-link">Don't have an account? <a href="signup.html">Sign up here</a></p>
-                <p class="auth-link"><a href="index.html">Back to Home</a></p>
-            </div>
-        </section>
+                </div>
+            </form>
+        </div>
+
+        <!-- Admin Login -->
+        <div id="adminLoginBox" style="display: none;">
+            <form id="pageAdminForm">
+                <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 6px; padding: 0.75rem 1rem; margin-bottom: 1.2rem; font-size: 0.85rem; color: #3730a3;">
+                    🛡️ <strong>Administrator Portal:</strong> Password-only access for MBA department staff and faculty administrators.
+                </div>
+                <div class="form-group">
+                    <label for="pageAdminPass">Admin Password</label>
+                    <input type="password" id="pageAdminPass" class="form-control" placeholder="Enter Admin Password" required>
+                    <p class="form-help">Designated password: <code>MBA Notes</code></p>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem; background: #3730a3;">
+                    Sign In as Administrator
+                </button>
+                <div style="margin-top: 1rem; text-align: center;">
+                    <button type="button" onclick="document.getElementById('pageAdminPass').value = 'MBA Notes'" class="btn btn-sm btn-outline">
+                        Auto-Fill "MBA Notes"
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div id="loginFeedback" style="margin-top: 1rem; text-align: center; font-size: 0.88rem; font-weight: 600; display: none;"></div>
     </div>
 
     <script src="js/api.js"></script>
     <script>
-        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+        function switchLoginMode(mode) {
+            document.getElementById('tabBtnStudent').classList.toggle('active', mode === 'student');
+            document.getElementById('tabBtnAdmin').classList.toggle('active', mode === 'admin');
+            document.getElementById('studentLoginBox').style.display = mode === 'student' ? 'block' : 'none';
+            document.getElementById('adminLoginBox').style.display = mode === 'admin' ? 'block' : 'none';
+            hideFeedback();
+        }
+
+        function fillTestStudent(roll) {
+            document.getElementById('pageStudentRoll').value = roll;
+            document.getElementById('pageStudentPass').value = roll;
+        }
+
+        function showFeedback(text, isError) {
+            const fb = document.getElementById('loginFeedback');
+            fb.style.display = 'block';
+            fb.style.color = isError ? '#dc2626' : '#16a34a';
+            fb.textContent = text;
+        }
+
+        function hideFeedback() {
+            document.getElementById('loginFeedback').style.display = 'none';
+        }
+
+        document.getElementById('pageStudentForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            
+            const roll = document.getElementById('pageStudentRoll').value.trim();
+            const pass = document.getElementById('pageStudentPass').value.trim();
             try {
-                await login(email, password);
-                showMessage('loginMessage', 'Login successful! Redirecting...', 'success');
-                setTimeout(() => window.location.href = 'index.html', 1500);
-            } catch (error) {
-                showMessage('loginMessage', error.message, 'error');
+                const res = await window.API.loginStudent(roll, pass);
+                if (res.user && res.user.role === 'admin') {
+                    showFeedback('Administrator recognized! Redirecting to Year Selector...', false);
+                    setTimeout(() => window.location.href = '/?admin_year_select=1', 500);
+                } else {
+                    showFeedback(`Welcome ${res.user.name || res.user.rollNumber}! Redirecting...`, false);
+                    setTimeout(() => window.location.href = '/', 500);
+                }
+            } catch (err) {
+                showFeedback(err.message, true);
             }
         });
 
-        function showMessage(elementId, text, type) {
-            const msg = document.getElementById(elementId);
-            msg.textContent = text;
-            msg.className = `message show ${type}`;
-        }
+        document.getElementById('pageAdminForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const pass = document.getElementById('pageAdminPass').value.trim();
+            try {
+                const res = await window.API.loginAdmin(pass);
+                showFeedback('Admin login successful! Redirecting to Year Selector...', false);
+                setTimeout(() => window.location.href = '/?admin_year_select=1', 500);
+            } catch (err) {
+                showFeedback(err.message, true);
+            }
+        });
     </script>
 </body>
 </html>

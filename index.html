@@ -3,122 +3,1469 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#6366f1">
-    <meta name="description" content="College Notes Platform - Download and share college notes">
+    <meta name="theme-color" content="#4338ca">
+    <meta name="description" content="Download, upload, and share college notes seamlessly">
+    <meta property="og:title" content="College Notes Platform">
+    <meta property="og:description" content="Download, upload, and share college notes seamlessly">
     <title>College Notes Platform</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%236366f1' width='192' height='192'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='100' fill='white' font-weight='bold'>N</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%234338ca' width='192' height='192'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='100' fill='white' font-weight='bold'>MBA</text></svg>">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .firebase-status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            color: #b45309;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 9999px;
+        }
+        .year-sem-filter-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.85rem 1.25rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .year-sem-title {
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: #1e1b4b;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .year-btn-group, .sem-btn-group {
+            display: flex;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+        }
+        .pill-btn {
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border: 1px solid #cbd5e1;
+            background: #f8fafc;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        .pill-btn:hover {
+            border-color: #94a3b8;
+            background: #e2e8f0;
+        }
+        .pill-btn.active {
+            background: #4338ca;
+            color: white;
+            border-color: #4338ca;
+        }
+        .badge-year {
+            background: #e0e7ff;
+            color: #3730a3;
+            font-size: 0.74rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 4px;
+        }
+        .badge-sem {
+            background: #fef3c7;
+            color: #92400e;
+            font-size: 0.74rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">📚 College Notes</div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="#" class="nav-link" id="browseLink">Browse</a>
-                <div class="nav-actions">
-                    <button id="searchBtn" class="nav-btn search-btn">🔍</button>
-                    <button id="userBtn" class="nav-btn">👤</button>
+    <!-- ============================================================== -->
+    <!-- SCREEN 1: PRIMARY LOGIN PORTAL (Displayed when not logged in)   -->
+    <!-- ============================================================== -->
+    <div id="screenLogin" class="screen-view" style="display: block; background: #f8fafc; min-height: 100vh; padding: 2rem 1rem;">
+        <!-- Top Portal Branding Bar -->
+        <div style="max-width: 900px; margin: 0 auto 1.5rem auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+                <span class="logo-badge" style="font-size: 1.1rem; padding: 0.4rem 0.8rem;">MBA</span>
+                <div>
+                    <h1 style="font-size: 1.25rem; font-weight: 800; color: #1e1b4b; line-height: 1.2;">Department of Management Studies</h1>
+                    <p style="font-size: 0.82rem; color: #64748b;">Academic Notes, Schedules &amp; Circulars Portal</p>
                 </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+                <span class="firebase-status-pill">🔥 console.firebase: Connected</span>
             </div>
         </div>
-    </nav>
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>College Notes Made Easy</h1>
-                <p>Download, upload, and share college notes seamlessly</p>
-                <div class="hero-buttons">
-                    <button id="downloadBtn" class="btn btn-primary">📥 Download Notes</button>
-                    <button id="uploadBtn" class="btn btn-secondary">📤 Upload Notes</button>
+        <!-- Centered Login Box -->
+        <div class="portal-login-card">
+            <div class="step-flow-header">
+                <span class="step-flow-badge">Step 1: Account Authentication</span>
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.35rem;">Academic Portal Sign In</h2>
+                <p style="font-size: 0.86rem; color: #c7d2fe;">Choose Student or Admin to access syllabus &amp; materials</p>
+            </div>
+
+            <div style="padding: 1.8rem 2rem;">
+                <!-- Auth Mode Switcher -->
+                <div class="auth-tabs" style="margin-bottom: 1.5rem;">
+                    <button class="auth-tab-btn active" id="portalTabBtnStudent" onclick="switchPortalAuthTab('student')">👨‍🎓 Student Login</button>
+                    <button class="auth-tab-btn" id="portalTabBtnAdmin" onclick="switchPortalAuthTab('admin')">🛡️ Admin Login</button>
+                </div>
+
+                <!-- Student Login Form -->
+                <div id="portalStudentAuthBox">
+                    <form id="portalStudentForm">
+                        <div class="form-group" style="margin-bottom: 1.1rem;">
+                            <label for="portalStudentRoll" style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">Roll Number (User ID) *</label>
+                            <input type="text" id="portalStudentRoll" class="form-control" placeholder="e.g. 25MBA01" required autofocus style="font-size: 1rem; padding: 0.75rem 1rem;">
+                            <p class="form-help" style="font-size: 0.8rem; color: #64748b; margin-top: 0.35rem;">
+                                Registered IDs: <strong>25MBA01 to 25MBA175</strong> (Year 1) or <strong>24MBA01 to 24MBA175</strong> (Year 2)
+                            </p>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 1.25rem;">
+                            <label for="portalStudentPass" style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">Password *</label>
+                            <input type="password" id="portalStudentPass" class="form-control" placeholder="Same as Roll Number (e.g. 25MBA01)" required style="font-size: 1rem; padding: 0.75rem 1rem;">
+                            <p class="form-help" style="font-size: 0.8rem; color: #64748b; margin-top: 0.35rem;">
+                                Your password is identical to your Roll Number.
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem; font-size: 1rem; font-weight: 700; border-radius: 8px;">
+                            Sign In as Student &rarr;
+                        </button>
+
+                        <!-- Quick Demo Test Accounts -->
+                        <div style="margin-top: 1.5rem; padding: 0.9rem; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px;">
+                            <div style="font-size: 0.82rem; font-weight: 700; color: #475569; margin-bottom: 0.4rem;">👉 1-Click Student Login (Cohort-Wise Access):</div>
+                            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                                <button type="button" onclick="quickFillPortalStudent('26MBA01')" class="btn btn-outline btn-sm" style="border-color: #4f46e5; color: #4338ca; font-weight: 700;">26MBA01 (1st Year)</button>
+                                <button type="button" onclick="quickFillPortalStudent('26MBA15')" class="btn btn-outline btn-sm">26MBA15</button>
+                                <button type="button" onclick="quickFillPortalStudent('26MBA175')" class="btn btn-outline btn-sm">26MBA175</button>
+                                <button type="button" onclick="quickFillPortalStudent('25MBA01')" class="btn btn-outline btn-sm" style="border-color: #d97706; color: #b45309; font-weight: 700;">25MBA01 (2nd Year)</button>
+                                <button type="button" onclick="quickFillPortalStudent('25MBA15')" class="btn btn-outline btn-sm">25MBA15</button>
+                                <button type="button" onclick="quickFillPortalStudent('25MBA175')" class="btn btn-outline btn-sm">25MBA175</button>
+                            </div>
+                            <div style="font-size: 0.76rem; color: #64748b; line-height: 1.4;">
+                                💡 <strong>Roll No Access Rule:</strong> Starting with <code>26MBA...</code> = 1st Year (Year 1) &bull; Starting with <code>25MBA...</code> = 2nd Year (Year 2).
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 1rem; font-size: 0.82rem; color: #64748b; text-align: center;">
+                            Students can view and download study notes, assignments, timetable, and notice boards.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Admin Login Form -->
+                <div id="portalAdminAuthBox" style="display: none;">
+                    <form id="portalAdminForm">
+                        <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 0.85rem 1rem; margin-bottom: 1.25rem; font-size: 0.85rem; color: #3730a3; line-height: 1.45;">
+                            🛡️ <strong>MBA Department Administrator:</strong> Password-only access. Full authority to upload notes, create assignments, manage timetables, and administer separate database tables.
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 1.25rem;">
+                            <label for="portalAdminPass" style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">Administrator Password *</label>
+                            <input type="password" id="portalAdminPass" class="form-control" placeholder="Enter admin password" required style="font-size: 1rem; padding: 0.75rem 1rem;">
+                            <p class="form-help" style="font-size: 0.8rem; color: #64748b; margin-top: 0.35rem;">
+                                Authorized password: <code>MBA Notes</code>
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem; font-size: 1rem; font-weight: 700; border-radius: 8px; background: #3730a3;">
+                            Sign In as Administrator &rarr;
+                        </button>
+
+                        <div style="margin-top: 1rem; text-align: center;">
+                            <button type="button" onclick="quickFillPortalAdmin()" class="btn btn-sm btn-outline">
+                                👉 Auto-Fill "MBA Notes"
+                            </button>
+                        </div>
+
+                        <div style="margin-top: 1.2rem; font-size: 0.82rem; color: #64748b; text-align: center;">
+                            After signing in, you will be prompted to select First Year or Second Year workspace.
+                        </div>
+                    </form>
+                </div>
+
+                <div id="portalLoginAlert" style="margin-top: 1.2rem; text-align: center; font-size: 0.9rem; font-weight: 700; display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- SCREEN 2: ADMIN YEAR SELECTION (Displayed to Admin after login) -->
+    <!-- ============================================================== -->
+    <div id="screenYearSelect" class="screen-view" style="display: none; background: #f8fafc; min-height: 100vh; padding: 2.5rem 1rem;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <!-- Top Navigation & Back Options -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                    <span class="logo-badge">MBA</span>
+                    <div>
+                        <h1 style="font-size: 1.35rem; font-weight: 800; color: #1e1b4b;">Administrator Workspace</h1>
+                        <p style="font-size: 0.85rem; color: #64748b;">Step 2 of 2: Select Academic Cohort</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+                    <button type="button" onclick="showScreen('screenLogin')" class="btn btn-outline btn-sm" style="font-weight: 700; background: white; border: 1.5px solid #cbd5e1; color: #334155; display: inline-flex; align-items: center; gap: 5px;">
+                        ← Back to Login
+                    </button>
+                    <button type="button" onclick="showScreen('screenHome')" class="btn btn-sm" style="font-weight: 700; background: #4338ca; color: white; display: inline-flex; align-items: center; gap: 5px;">
+                        🏠 Go to Dashboard →
+                    </button>
+                    <span class="user-role-tag role-admin">🛡️ Admin Authenticated</span>
+                    <button onclick="handleLogout()" class="btn btn-outline btn-sm" style="color: #dc2626; border-color: #fca5a5;">🚪 Logout</button>
                 </div>
             </div>
-        </section>
 
-        <!-- Search Bar -->
-        <section class="search-section">
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search notes by subject, course, or keyword..." class="search-input">
-                <select id="categoryFilter" class="category-filter">
-                    <option value="">All Categories</option>
-                    <option value="cs">Computer Science</option>
-                    <option value="eng">Engineering</option>
-                    <option value="business">Business</option>
-                    <option value="science">Science</option>
-                    <option value="arts">Arts</option>
-                    <option value="other">Other</option>
+            <!-- Choice Banner -->
+            <div style="text-align: center; margin-bottom: 2.2rem;">
+                <div style="display: inline-block; background: #e0e7ff; color: #3730a3; font-weight: 800; font-size: 0.8rem; padding: 4px 14px; border-radius: 9999px; margin-bottom: 0.75rem;">
+                    ⚡ ACADEMIC YEAR SELECTION
+                </div>
+                <h2 style="font-size: 1.75rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem;">
+                    Which Academic Year do you want to manage?
+                </h2>
+                <p style="font-size: 0.95rem; color: #64748b; max-width: 650px; margin: 0 auto;">
+                    Select an academic cohort below. Notes, assignments, and timetable schedules in the admin panel and portal will display according to your year selection:
+                </p>
+            </div>
+
+            <!-- 3 Big Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.5rem;">
+                <!-- Option 1: First Year -->
+                <div class="step-card" onclick="chooseAdminYear('Year 1')" style="background: white; border: 2px solid #c7d2fe; border-radius: 12px; padding: 1.8rem; box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 2.2rem;">🎓</span>
+                            <span style="background: #e0e7ff; color: #3730a3; font-weight: 800; font-size: 0.78rem; padding: 4px 10px; border-radius: 9999px;">BATCH 2026–2028</span>
+                        </div>
+                        <h3 style="font-size: 1.35rem; font-weight: 800; color: #1e1b4b; margin-bottom: 0.5rem;">First Year (Year 1)</h3>
+                        <p style="font-size: 0.88rem; color: #475569; line-height: 1.45; margin-bottom: 1rem;">
+                            Semesters 1 &amp; 2. Enrolled students: <strong>26MBA01 to 26MBA175</strong>. Core management foundations, accounting, marketing &amp; economics.
+                        </p>
+                        <ul style="font-size: 0.82rem; color: #64748b; margin-bottom: 1.5rem; padding-left: 1.2rem; line-height: 1.5;">
+                            <li>Manage Year 1 notes &amp; syllabus</li>
+                            <li>View 26MBA... registered students</li>
+                            <li>Sem 1 &amp; Sem 2 weekly timetables</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-weight: 700;">
+                        👉 Go to First Year (Year 1) Workspace
+                    </button>
+                </div>
+
+                <!-- Option 2: Second Year -->
+                <div class="step-card" onclick="chooseAdminYear('Year 2')" style="background: white; border: 2px solid #fde68a; border-radius: 12px; padding: 1.8rem; box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 2.2rem;">🎯</span>
+                            <span style="background: #fef3c7; color: #92400e; font-weight: 800; font-size: 0.78rem; padding: 4px 10px; border-radius: 9999px;">BATCH 2025–2027</span>
+                        </div>
+                        <h3 style="font-size: 1.35rem; font-weight: 800; color: #78350f; margin-bottom: 0.5rem;">Second Year (Year 2)</h3>
+                        <p style="font-size: 0.88rem; color: #475569; line-height: 1.45; margin-bottom: 1rem;">
+                            Final Year (Semesters 3 &amp; 4). Enrolled students: <strong>25MBA01 to 25MBA175</strong>. Advanced corporate finance, analytics, supply chain &amp; strategy.
+                        </p>
+                        <ul style="font-size: 0.82rem; color: #64748b; margin-bottom: 1.5rem; padding-left: 1.2rem; line-height: 1.5;">
+                            <li>Manage Year 2 notes &amp; specializations</li>
+                            <li>View 25MBA... registered students</li>
+                            <li>Sem 3 &amp; Sem 4 timetables &amp; assignments</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-secondary" style="width: 100%; padding: 0.75rem; font-weight: 700; background: #b45309; color: white; border-color: #b45309;">
+                        👉 Go to Second Year (Year 2) Workspace
+                    </button>
+                </div>
+
+                <!-- Option 3: All Years Combined -->
+                <div class="step-card" onclick="chooseAdminYear('all')" style="background: white; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.8rem; box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 2.2rem;">🌐</span>
+                            <span style="background: #f1f5f9; color: #475569; font-weight: 800; font-size: 0.78rem; padding: 4px 10px; border-radius: 9999px;">ALL BATCHES</span>
+                        </div>
+                        <h3 style="font-size: 1.35rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem;">All Years Combined</h3>
+                        <p style="font-size: 0.88rem; color: #475569; line-height: 1.45; margin-bottom: 1rem;">
+                            Department-wide overview. View and manage all student roll numbers (both 26MBA &amp; 25MBA), complete notes repository, and all schedules simultaneously.
+                        </p>
+                        <ul style="font-size: 0.82rem; color: #64748b; margin-bottom: 1.5rem; padding-left: 1.2rem; line-height: 1.5;">
+                            <li>Access all separate database tables</li>
+                            <li>Full student roster across all cohorts</li>
+                            <li>Universal search across all years</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-outline" style="width: 100%; padding: 0.75rem; font-weight: 700;">
+                        👉 Manage All Years Combined
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bottom Back & Navigation Bar -->
+            <div style="margin-top: 2.5rem; display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                <button type="button" onclick="showScreen('screenLogin')" class="btn btn-outline" style="background: white; border: 1.5px solid #cbd5e1; font-weight: 700; padding: 0.65rem 1.5rem; display: inline-flex; align-items: center; gap: 6px;">
+                    ← Back to Login Screen
+                </button>
+                <button type="button" onclick="showScreen('screenHome')" class="btn btn-outline" style="background: white; border: 1.5px solid #cbd5e1; font-weight: 700; padding: 0.65rem 1.5rem; display: inline-flex; align-items: center; gap: 6px;">
+                    Return to Portal Dashboard →
+                </button>
+            </div>
+
+            <div style="margin-top: 1.5rem; text-align: center; color: #64748b; font-size: 0.85rem;">
+                💡 You can return to this screen at any time using the <strong>"🔄 Change Year / Back"</strong> button on the dashboard or admin panel.
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- SCREEN 3: MAIN ACADEMIC HOME & DASHBOARD (Authenticated)       -->
+    <!-- ============================================================== -->
+    <div id="screenHome" class="screen-view" style="display: none;">
+        <!-- Top Global Announcement Banner -->
+        <div id="studentModeBanner" class="notice-banner">
+            <span>🎓 <strong>MBA Academic Portal &bull; Firebase Connected</strong>: Batch 2025-2027. User ID: <strong>25MBA01 - 25MBA175</strong> | Admin Password: <strong>MBA Notes</strong></span>
+        </div>
+
+        <!-- Navigation Header -->
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="javascript:void(0)" onclick="switchTab('notes')" class="logo-wrap">
+                    <span class="logo-badge">MBA</span>
+                    <div class="logo-text">
+                        <h1>College Notes Platform</h1>
+                        <p>Department of Management Studies &bull; Firebase Console Storage</p>
+                    </div>
+                </a>
+
+                <!-- Navigation Tabs -->
+                <nav class="nav-links">
+                    <button class="nav-tab active" data-tab="notes">📚 MBA Notes</button>
+                    <button class="nav-tab" data-tab="assignments">📝 Assignments</button>
+                    <button class="nav-tab" data-tab="timetable">📅 Time Table</button>
+                    <button class="nav-tab" data-tab="announcements">📢 Notice Board</button>
+                    <button class="nav-tab" id="navAdminTab" data-tab="admin" style="display: none;">⚙️ Admin &amp; Database Tables</button>
+                </nav>
+
+                <!-- Authentication Controls -->
+                <div id="navAuthContainer" class="nav-auth">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+            </div>
+        </header>
+
+        <!-- Admin Academic Year Quick Control Bar (Visible for Admin) -->
+        <div id="adminYearBar" style="display: none; background: linear-gradient(90deg, #1e1b4b 0%, #312e81 100%); color: white; padding: 0.65rem 1.5rem; font-size: 0.88rem; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; border-bottom: 2px solid #4338ca; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                <span style="font-weight: 800; background: #4f46e5; color: white; padding: 2px 10px; border-radius: 9999px; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase;">🛡️ ADMIN ACTIVE</span>
+                <span>Managing Section: <strong id="adminActiveYearText" style="color: #fde047; font-weight: 800;">All Years</strong></span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                <span style="font-size: 0.8rem; color: #c7d2fe;">Cohort Filter:</span>
+                <button type="button" onclick="selectAdminYear('Year 1')" id="btnYear1Nav" class="btn btn-sm" style="background: #4338ca; color: white; border: 1px solid #6366f1; padding: 4px 12px; font-size: 0.82rem; font-weight: 700; border-radius: 6px;">
+                    🎓 First Year (Year 1)
+                </button>
+                <button type="button" onclick="selectAdminYear('Year 2')" id="btnYear2Nav" class="btn btn-sm" style="background: #b45309; color: white; border: 1px solid #f59e0b; padding: 4px 12px; font-size: 0.82rem; font-weight: 700; border-radius: 6px;">
+                    🎯 Second Year (Year 2)
+                </button>
+                <button type="button" onclick="selectAdminYear('all')" id="btnYearAllNav" class="btn btn-sm" style="background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 4px 10px; font-size: 0.82rem; border-radius: 6px;">
+                    🌐 All Years
+                </button>
+                <button type="button" onclick="switchToYearSelectScreen()" class="btn btn-sm" style="background: #fef08a; color: #854d0e; font-weight: 800; padding: 4px 12px; font-size: 0.82rem; border-radius: 6px; margin-left: 0.5rem; display: inline-flex; align-items: center; gap: 4px;">
+                    ← Back to Year Select
+                </button>
+            </div>
+        </div>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div style="display: flex; gap: 0.6rem; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                <span class="hero-pill">✨ Online Academic Hub &bull; Year 1 (26MBA) &amp; Year 2 (25MBA)</span>
+                <span class="firebase-status-pill">🔥 console.firebase: Connected</span>
+            </div>
+            <h2>Master of Business Administration Portal</h2>
+            <p>Access high-yield MBA study notes, course lecture materials, assignments, weekly lecture timetables, and department notices categorized by <strong>Year of Student</strong> and <strong>Semester</strong>.</p>
+            <div class="hero-actions">
+                <button onclick="switchTab('notes')" class="btn btn-primary">📥 Download MBA Notes</button>
+                <button onclick="switchTab('assignments')" class="btn btn-secondary">📝 View Assignments</button>
+                <button onclick="switchTab('timetable')" class="btn btn-secondary">📅 Check Timetable</button>
+                <button onclick="openCreateNoteModal()" class="btn btn-secondary admin-only-action" style="display: none; background: #3730a3; color: white; border-color: #4f46e5;">➕ Upload New Note</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Body -->
+    <main class="main-content">
+
+        <!-- ============================================================== -->
+        <!-- MASTER ACADEMIC YEAR & SEMESTER FILTER BAR                     -->
+        <!-- ============================================================== -->
+        <div class="year-sem-filter-bar">
+            <div class="year-sem-title">🎓 Student Academic Year:</div>
+            <div class="year-btn-group" id="globalYearPills">
+                <button class="pill-btn active" data-year="all" onclick="selectAcademicYear('all')">All Years</button>
+                <button class="pill-btn" data-year="Year 1" onclick="selectAcademicYear('Year 1')">Year 1 (1st Year &bull; 26MBA)</button>
+                <button class="pill-btn" data-year="Year 2" onclick="selectAcademicYear('Year 2')">Year 2 (2nd Year &bull; 25MBA)</button>
+            </div>
+
+            <div style="width: 1px; height: 24px; background: #e2e8f0; margin: 0 0.5rem;" class="filter-divider"></div>
+
+            <div class="year-sem-title">📖 Semester:</div>
+            <div class="sem-btn-group" id="globalSemPills">
+                <button class="pill-btn active" data-sem="all" onclick="selectAcademicSemester('all')">All Semesters</button>
+                <button class="pill-btn" data-sem="Semester 1" onclick="selectAcademicSemester('Semester 1')">Semester 1</button>
+                <button class="pill-btn" data-sem="Semester 2" onclick="selectAcademicSemester('Semester 2')">Semester 2</button>
+                <button class="pill-btn" data-sem="Semester 3" onclick="selectAcademicSemester('Semester 3')">Semester 3</button>
+                <button class="pill-btn" data-sem="Semester 4" onclick="selectAcademicSemester('Semester 4')">Semester 4</button>
+            </div>
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- TAB 1: MBA NOTES (Student: Download; Admin: Upload/Edit/Delete) -->
+        <!-- ============================================================== -->
+        <section id="section-notes" class="tab-section">
+            <!-- Student Cohort Restriction Notice -->
+            <div id="studentNotesCohortNotice" style="display: none;"></div>
+
+            <!-- Admin Year Filter Indicator for Notes -->
+            <div id="adminNotesCohortNotice" style="display: none; background: #f8fafc; border: 1.5px solid #c7d2fe; border-radius: 8px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <span style="font-size: 1.2rem;">🛡️</span>
+                    <span style="font-size: 0.88rem; color: #1e1b4b;">
+                        Admin Notes View: Displaying notes for <strong id="adminNotesActiveYearBadge" style="color: #4338ca;">All Years</strong>
+                    </span>
+                </div>
+                <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+                    <button type="button" onclick="selectAdminYear('Year 1')" class="btn btn-sm btn-outline">Year 1</button>
+                    <button type="button" onclick="selectAdminYear('Year 2')" class="btn btn-sm btn-outline">Year 2</button>
+                    <button type="button" onclick="selectAdminYear('all')" class="btn btn-sm btn-outline">All</button>
+                    <button type="button" onclick="switchToYearSelectScreen()" class="btn btn-sm btn-secondary" style="font-weight: 700; background: #3730a3;">← Back to Year Select</button>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <div>
+                    <h3 id="notesHeadingTitle">📚 MBA Lecture Notes & Study Materials</h3>
+                    <p id="notesResultCount">Loading materials...</p>
+                </div>
+                <div class="admin-only-action" style="display: none;">
+                    <button onclick="openCreateNoteModal()" class="btn btn-primary">
+                        ➕ Upload MBA Note
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Search & Filters -->
+            <div class="filter-bar">
+                <div class="search-input-wrap">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="noteSearchInput" placeholder="Search notes by subject, topic, or keyword...">
+                </div>
+
+                <select id="noteSubjectFilter" class="filter-select">
+                    <option value="all">All MBA Subjects</option>
+                    <option value="Principles of Management">Principles of Management</option>
+                    <option value="Managerial Economics">Managerial Economics</option>
+                    <option value="Financial Accounting">Financial Accounting</option>
+                    <option value="Marketing Management">Marketing Management</option>
+                    <option value="Financial Management">Financial Management</option>
+                    <option value="Human Resource Management">Human Resource Management</option>
+                    <option value="Operations & Supply Chain">Operations & Supply Chain</option>
+                    <option value="Business Analytics">Business Analytics</option>
+                    <option value="Strategic Management">Strategic Management</option>
+                    <option value="Entrepreneurship">Entrepreneurship & VC</option>
+                    <option value="Business Ethics & ESG">Business Ethics & ESG</option>
                 </select>
-                <button id="applyFilter" class="btn btn-small">Filter</button>
+
+                <select id="noteSortFilter" class="filter-select">
+                    <option value="recent">Sort: Most Recent</option>
+                    <option value="downloads">Sort: Most Downloaded</option>
+                </select>
+            </div>
+
+            <!-- Notes Cards Grid -->
+            <div id="notesListContainer" class="grid-cards">
+                <!-- Populated by app.js -->
             </div>
         </section>
 
-        <!-- Featured Notes -->
-        <section class="featured">
-            <h2>Featured Notes</h2>
-            <div id="featuredNotes" class="notes-grid">
-                <!-- Notes will be loaded here -->
-            </div>
-        </section>
 
-        <!-- All Notes -->
-        <section class="all-notes">
-            <h2>All Notes</h2>
-            <div id="notesList" class="notes-grid">
-                <!-- Notes will be loaded here -->
-            </div>
-        </section>
-    </div>
-
-    <!-- User Menu Modal -->
-    <div id="userMenu" class="modal">
-        <div class="modal-content user-menu-content">
-            <button class="close-btn" onclick="closeModal('userMenu')">&times;</button>
-            <div id="authButtons">
-                <button id="loginBtn" class="btn btn-primary full-width">🔑 Login</button>
-                <button id="signupBtn" class="btn btn-secondary full-width">✍️ Sign Up</button>
-            </div>
-            <div id="userActions" style="display: none;">
-                <div class="user-info">
-                    <p id="userEmail"></p>
-                    <p id="userRole"></p>
+        <!-- ============================================================== -->
+        <!-- TAB 2: ASSIGNMENTS (Student: View; Admin: Create/Edit/Delete)   -->
+        <!-- ============================================================== -->
+        <section id="section-assignments" class="tab-section" style="display: none;">
+            <div class="section-header">
+                <div>
+                    <h3 id="assignmentsHeadingTitle">📝 MBA Course Assignments</h3>
+                    <p id="assignmentsCount">View upcoming deadlines and project specifications</p>
                 </div>
-                <button id="dashboardBtn" class="btn btn-primary full-width">📊 My Dashboard</button>
-                <button id="logoutBtn" class="btn btn-secondary full-width">🚪 Logout</button>
+                <div class="admin-only-action" style="display: none;">
+                    <button onclick="openCreateAssignmentModal()" class="btn btn-primary">
+                        ➕ Create New Assignment
+                    </button>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <select id="assignmentSubjectFilter" class="filter-select">
+                    <option value="all">All Subjects</option>
+                    <option value="Financial Accounting">Financial Accounting</option>
+                    <option value="Marketing Management">Marketing Management</option>
+                    <option value="Financial Management">Financial Management</option>
+                    <option value="Operations & Supply Chain">Operations & Supply Chain</option>
+                    <option value="Human Resource Management">Human Resource Management</option>
+                    <option value="Entrepreneurship">Entrepreneurship</option>
+                </select>
+
+                <select id="assignmentStatusFilter" class="filter-select">
+                    <option value="all">All Statuses</option>
+                    <option value="Open">Open</option>
+                    <option value="Urgent">Urgent / Due Soon</option>
+                    <option value="Closed">Closed</option>
+                </select>
+            </div>
+
+            <div id="assignmentsListContainer">
+                <!-- Populated by app.js -->
+            </div>
+        </section>
+
+
+        <!-- ============================================================== -->
+        <!-- TAB 3: TIMETABLE (Student: View; Admin: Create/Edit/Delete)     -->
+        <!-- ============================================================== -->
+        <section id="section-timetable" class="tab-section" style="display: none;">
+            <div class="section-header">
+                <div>
+                    <h3 id="timetableHeadingTitle">📅 MBA Weekly Lecture Schedule</h3>
+                    <p id="timetableHeaderInfo">Select a weekday to view scheduled lectures and halls</p>
+                </div>
+                <div class="admin-only-action" style="display: none;">
+                    <button onclick="openCreateTimetableModal()" class="btn btn-primary">
+                        ➕ Add Class Slot
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day Selector Pills -->
+            <div class="day-selector">
+                <button class="day-btn active" data-day="Monday" onclick="selectTimetableDay('Monday')">Monday</button>
+                <button class="day-btn" data-day="Tuesday" onclick="selectTimetableDay('Tuesday')">Tuesday</button>
+                <button class="day-btn" data-day="Wednesday" onclick="selectTimetableDay('Wednesday')">Wednesday</button>
+                <button class="day-btn" data-day="Thursday" onclick="selectTimetableDay('Thursday')">Thursday</button>
+                <button class="day-btn" data-day="Friday" onclick="selectTimetableDay('Friday')">Friday</button>
+                <button class="day-btn" data-day="Saturday" onclick="selectTimetableDay('Saturday')">Saturday</button>
+            </div>
+
+            <!-- Lecture Slots List -->
+            <div id="timetableSlotsContainer">
+                <!-- Populated by app.js -->
+            </div>
+        </section>
+
+
+        <!-- ============================================================== -->
+        <!-- TAB 4: CAMPUS NOTICE BOARD & COLLEGE COMMUNICATION            -->
+        <!-- ============================================================== -->
+        <section id="section-announcements" class="tab-section" style="display: none;">
+            <div class="section-header">
+                <div>
+                    <h3>📢 Campus Notice Board & Communication Hub</h3>
+                    <p>Official alerts for examinations, placements, seminars, and circulars</p>
+                </div>
+                <div class="admin-only-action" style="display: none;">
+                    <button onclick="openCreateAnnouncementModal()" class="btn btn-primary">
+                        ➕ Post Announcement
+                    </button>
+                </div>
+            </div>
+
+            <div id="announcementsListContainer">
+                <!-- Populated by app.js -->
+            </div>
+        </section>
+
+
+        <!-- ============================================================== -->
+        <!-- TAB 5: ADMIN CONSOLE & STUDENT ROLL EXTENSION (Admin Only)     -->
+        <!-- ============================================================== -->
+        <section id="section-admin" class="tab-section" style="display: none;">
+            <div class="section-header">
+                <div>
+                    <h3>⚙️ Administrator Control Console</h3>
+                    <p>Manage student roll numbers, batch extensions, and academic records (Synced to Firebase Firestore)</p>
+                </div>
+            </div>
+
+            <!-- Academic Year Quick Navigator for Admin -->
+            <div style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 2rem; color: white; box-shadow: var(--shadow-lg);">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+                    <div>
+                        <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                            <span>🎓 Section Control</span>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 800; margin: 0; color: #fff;">Academic Year Quick Switcher</h3>
+                        <p style="color: #c7d2fe; font-size: 0.88rem; margin-top: 0.25rem;">Quickly jump between First Year and Second Year to manage curriculum, lecture notes, timetables, and student rosters.</p>
+                    </div>
+                    <button type="button" onclick="openModal('adminYearSelectModal')" class="btn btn-sm" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.3); font-weight: 700;">
+                        ⚡ Open Year Dialog
+                    </button>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                    <!-- First Year Card -->
+                    <div id="adminCardYear1" onclick="selectAdminYear('Year 1')" style="background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.2); border-radius: 10px; padding: 1.2rem; cursor: pointer; transition: all 0.2s;" class="admin-year-box">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                            <span style="font-size: 1.8rem;">🎓</span>
+                            <span id="badgeY1Status" style="font-size: 0.75rem; background: #4f46e5; color: white; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Year 1</span>
+                        </div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem; color: #fff;">First Year (Year 1)</h4>
+                        <div style="font-size: 0.8rem; color: #a5b4fc; margin-bottom: 0.6rem;">Semester 1 &amp; Semester 2 &bull; Batch 2025-2027</div>
+                        <p style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.35; margin-bottom: 0.8rem;">
+                            Core management subjects, foundation courses, and 175 registered students (25MBA01 – 25MBA175).
+                        </p>
+                        <button type="button" class="btn btn-sm" style="width: 100%; background: #4f46e5; color: white; font-weight: 700;">👉 Go to First Year</button>
+                    </div>
+
+                    <!-- Second Year Card -->
+                    <div id="adminCardYear2" onclick="selectAdminYear('Year 2')" style="background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.2); border-radius: 10px; padding: 1.2rem; cursor: pointer; transition: all 0.2s;" class="admin-year-box">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                            <span style="font-size: 1.8rem;">🎯</span>
+                            <span id="badgeY2Status" style="font-size: 0.75rem; background: #d97706; color: white; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Year 2</span>
+                        </div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem; color: #fff;">Second Year (Year 2)</h4>
+                        <div style="font-size: 0.8rem; color: #fde68a; margin-bottom: 0.6rem;">Semester 3 &amp; Semester 4 &bull; Final Year Batch 2024-2026</div>
+                        <p style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.35; margin-bottom: 0.8rem;">
+                            Advanced electives, corporate finance, venture capital, and registered students (24MBA01 – 24MBA175).
+                        </p>
+                        <button type="button" class="btn btn-sm" style="width: 100%; background: #d97706; color: white; font-weight: 700; border-color: #d97706;">👉 Go to Second Year</button>
+                    </div>
+
+                    <!-- All Years Card -->
+                    <div id="adminCardYearAll" onclick="selectAdminYear('all')" style="background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.2); border-radius: 10px; padding: 1.2rem; cursor: pointer; transition: all 0.2s;" class="admin-year-box">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                            <span style="font-size: 1.8rem;">🌐</span>
+                            <span style="font-size: 0.75rem; background: #475569; color: white; padding: 2px 8px; border-radius: 4px; font-weight: 700;">All</span>
+                        </div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem; color: #fff;">All Years Combined</h4>
+                        <div style="font-size: 0.8rem; color: #cbd5e1; margin-bottom: 0.6rem;">Comprehensive Department Overview</div>
+                        <p style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.35; margin-bottom: 0.8rem;">
+                            View and administer the complete database across both First Year and Second Year cohorts simultaneously.
+                        </p>
+                        <button type="button" class="btn btn-sm btn-outline" style="width: 100%; color: white; border-color: rgba(255,255,255,0.4);">🌐 View All Years</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Overview -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow);">
+                    <div style="font-size: 0.8rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Total MBA Notes</div>
+                    <div id="statTotalNotes" style="font-size: 1.8rem; font-weight: 800; color: #4338ca; margin-top: 0.25rem;">12</div>
+                </div>
+
+                <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow);">
+                    <div style="font-size: 0.8rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Total Downloads</div>
+                    <div id="statTotalDownloads" style="font-size: 1.8rem; font-weight: 800; color: #0d9488; margin-top: 0.25rem;">2,150</div>
+                </div>
+
+                <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow);">
+                    <div style="font-size: 0.8rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Registered Students</div>
+                    <div id="statTotalStudents" style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 0.25rem;">175</div>
+                </div>
+
+                <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow);">
+                    <div style="font-size: 0.8rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Active Batch Range</div>
+                    <div id="statBatchRange" style="font-size: 1.1rem; font-weight: 800; color: #d97706; margin-top: 0.5rem;">25MBA01 - 25MBA175</div>
+                </div>
+            </div>
+
+            <!-- Firebase Console Sync Banner -->
+            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="font-size: 1.6rem;">🔥</span>
+                    <div>
+                        <div style="font-weight: 700; color: #1e3a8a; font-size: 0.95rem;">Firebase Firestore Online Database Active</div>
+                        <div style="font-size: 0.82rem; color: #3b82f6;">All notes, assignments, timetables, and student IDs are persistently stored in Firebase Console project: <strong>vast-gravity-mcjpc</strong>.</div>
+                    </div>
+                </div>
+                <div>
+                    <span class="user-role-tag role-admin">Cloud Synced</span>
+                </div>
+            </div>
+
+            <!-- ========================================================== -->
+            <!-- LIVE DATABASE TABLES EXPLORER: SEPARATE PERSISTED TABLES   -->
+            <!-- ========================================================== -->
+            <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 2rem; box-shadow: var(--shadow);">
+                <div style="border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <h4 style="font-size: 1.25rem; color: #0f172a; font-weight: 800; display: flex; align-items: center; gap: 0.5rem;">
+                            <span>🗄️ Database Tables Hub</span>
+                            <span style="font-size: 0.75rem; background: #e0e7ff; color: #3730a3; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Separate Firestore Collections</span>
+                        </h4>
+                        <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.25rem;">
+                            All student data and admin uploads are stored in separate, independent database tables. Select a table to view live records:
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; align-items: center;">
+                        <button onclick="refreshCurrentAdminTable()" class="btn btn-outline btn-sm">🔄 Refresh Active Table</button>
+                    </div>
+                </div>
+
+                <!-- Database Table Selector Subtabs -->
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;" id="dbTableSubtabs">
+                    <button class="table-subtab-btn active" id="tabBtnDbStudents" onclick="switchDbTable('students')">
+                        👥 Table: students <span id="countDbStudents" style="background: rgba(0,0,0,0.12); padding: 2px 7px; border-radius: 10px; font-size: 0.75rem; font-weight: 800;">175</span>
+                    </button>
+                    <button class="table-subtab-btn" id="tabBtnDbNotes" onclick="switchDbTable('notes')">
+                        📚 Table: notes <span id="countDbNotes" style="background: rgba(0,0,0,0.12); padding: 2px 7px; border-radius: 10px; font-size: 0.75rem; font-weight: 800;">12</span>
+                    </button>
+                    <button class="table-subtab-btn" id="tabBtnDbAssignments" onclick="switchDbTable('assignments')">
+                        📝 Table: assignments <span id="countDbAssignments" style="background: rgba(0,0,0,0.12); padding: 2px 7px; border-radius: 10px; font-size: 0.75rem; font-weight: 800;">4</span>
+                    </button>
+                    <button class="table-subtab-btn" id="tabBtnDbTimetable" onclick="switchDbTable('timetable')">
+                        📅 Table: timetable <span id="countDbTimetable" style="background: rgba(0,0,0,0.12); padding: 2px 7px; border-radius: 10px; font-size: 0.75rem; font-weight: 800;">24</span>
+                    </button>
+                    <button class="table-subtab-btn" id="tabBtnDbAnnouncements" onclick="switchDbTable('announcements')">
+                        📢 Table: announcements <span id="countDbAnnouncements" style="background: rgba(0,0,0,0.12); padding: 2px 7px; border-radius: 10px; font-size: 0.75rem; font-weight: 800;">4</span>
+                    </button>
+                </div>
+
+                <!-- ============================================== -->
+                <!-- SUBTAB 1: STUDENTS TABLE                       -->
+                <!-- ============================================== -->
+                <div id="dbViewStudents" class="db-table-view">
+                    <!-- Roll Number Extension Tool -->
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem;">
+                        <h5 style="font-size: 1.05rem; color: #1e1b4b; margin-bottom: 0.4rem; font-weight: 700;">🎓 Student Roll Number Extension Options</h5>
+                        <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 1.2rem;">
+                            Students log in using their Roll Number as both User ID &amp; Password. Extend the current batch (25MBA01 - 25MBA175) or add custom lateral roll numbers instantly. All changes sync to Firebase Firestore.
+                        </p>
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem;">
+                            <!-- Option A: Batch Range Extension -->
+                            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1rem;">
+                                <div style="font-size: 0.9rem; color: #1e1b4b; margin-bottom: 0.35rem; font-weight: 700;">1. Quick Batch Extension</div>
+                                <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 0.75rem;">
+                                    Instantly generate the next sequence of roll numbers up to target.
+                                </p>
+                                <div style="display: flex; gap: 0.5rem; margin-bottom: 0.6rem;">
+                                    <input type="number" id="extendTargetInput" placeholder="Target roll (e.g. 200)" class="form-control" style="flex: 1;">
+                                    <button onclick="handleCustomExtend()" class="btn btn-primary btn-sm">Extend</button>
+                                </div>
+                                <div style="display: flex; gap: 0.4rem;">
+                                    <button onclick="handleQuickExtend(25)" class="btn btn-outline btn-sm">+25 Students</button>
+                                    <button onclick="handleQuickExtend(50)" class="btn btn-outline btn-sm">+50 Students</button>
+                                </div>
+                            </div>
+
+                            <!-- Option B: Add Single / Custom Roll Number -->
+                            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1rem;">
+                                <div style="font-size: 0.9rem; color: #1e1b4b; margin-bottom: 0.35rem; font-weight: 700;">2. Add Custom / Lateral Student</div>
+                                <form onsubmit="handleAddSingleStudent(event)" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem;">
+                                        <input type="text" id="singleRollInput" placeholder="Roll (e.g. 25MBA176)" class="form-control" required>
+                                        <input type="text" id="singleNameInput" placeholder="Student Name" class="form-control">
+                                    </div>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem;">
+                                        <select id="singleYearInput" class="form-control">
+                                            <option value="Year 1">Year 1</option>
+                                            <option value="Year 2">Year 2</option>
+                                        </select>
+                                        <select id="singleSemInput" class="form-control">
+                                            <option value="Semester 1">Semester 1</option>
+                                            <option value="Semester 2" selected>Semester 2</option>
+                                            <option value="Semester 3">Semester 3</option>
+                                            <option value="Semester 4">Semester 4</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-secondary btn-sm" style="align-self: flex-start;">+ Add Student Record</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Student Registry Table -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.75rem;">
+                            <div>
+                                <h5 style="font-size: 1rem; font-weight: 700; color: #0f172a;">Table: students Records</h5>
+                                <p id="studentRegistryCount" style="font-size: 0.8rem; color: #64748b;">Loading students...</p>
+                            </div>
+                            <div style="min-width: 240px;">
+                                <input type="text" id="studentSearchInput" placeholder="Search Roll Number (e.g. 25MBA01)..." class="form-control" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">
+                            </div>
+                        </div>
+
+                        <div class="data-table-wrap">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Roll Number (User ID)</th>
+                                        <th>Student Name</th>
+                                        <th>Year &amp; Semester</th>
+                                        <th>Default Password</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="studentsTableBody">
+                                    <!-- Populated by app.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================== -->
+                <!-- SUBTAB 2: NOTES TABLE                          -->
+                <!-- ============================================== -->
+                <div id="dbViewNotes" class="db-table-view" style="display: none;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.75rem;">
+                        <div>
+                            <h5 style="font-size: 1rem; font-weight: 700; color: #0f172a;">Table: notes Records</h5>
+                            <p id="dbNotesCount" style="font-size: 0.8rem; color: #64748b;">All MBA lecture notes uploaded to database</p>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                            <button type="button" onclick="switchToYearSelectScreen()" class="btn btn-outline btn-sm" style="font-weight: 700; border-color: #cbd5e1;">
+                                ← Back to Year Select
+                            </button>
+                            <button onclick="openCreateNoteModal()" class="btn btn-primary btn-sm">➕ Add Note to Table</button>
+                        </div>
+                    </div>
+
+                    <!-- Admin Year Filter Strip for Notes Table -->
+                    <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 0.5rem 0.8rem; margin-bottom: 0.85rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="font-size: 0.82rem; font-weight: 700; color: #334155;">Show Notes By Year:</span>
+                            <select id="adminNotesFilterSelect" class="form-control" style="padding: 3px 8px; font-size: 0.82rem; width: auto; background: white;" onchange="handleAdminNotesYearFilterChange(this.value)">
+                                <option value="all">All Academic Years</option>
+                                <option value="Year 1">Year 1 (1st Year &bull; 26MBA)</option>
+                                <option value="Year 2">Year 2 (2nd Year &bull; 25MBA)</option>
+                            </select>
+                            <span id="adminNotesFilterBadge" style="font-size: 0.75rem; background: #e0e7ff; color: #3730a3; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Active: All</span>
+                        </div>
+                        <div style="font-size: 0.78rem; color: #64748b;">
+                            ⚡ Displays notes according to selected academic year
+                        </div>
+                    </div>
+
+                    <div class="data-table-wrap">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Title</th>
+                                    <th>Subject &amp; Code</th>
+                                    <th>Year &amp; Semester</th>
+                                    <th>Downloads</th>
+                                    <th>File</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dbNotesTableBody">
+                                <!-- Populated dynamically by app.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ============================================== -->
+                <!-- SUBTAB 3: ASSIGNMENTS TABLE                    -->
+                <!-- ============================================== -->
+                <div id="dbViewAssignments" class="db-table-view" style="display: none;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.75rem;">
+                        <div>
+                            <h5 style="font-size: 1rem; font-weight: 700; color: #0f172a;">Table: assignments Records</h5>
+                            <p id="dbAssignmentsCount" style="font-size: 0.8rem; color: #64748b;">All coursework tasks and deadlines</p>
+                        </div>
+                        <button onclick="openCreateAssignmentModal()" class="btn btn-primary btn-sm">➕ Add Assignment to Table</button>
+                    </div>
+
+                    <div class="data-table-wrap">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Title</th>
+                                    <th>Subject</th>
+                                    <th>Year &amp; Semester</th>
+                                    <th>Due Date</th>
+                                    <th>Status</th>
+                                    <th>Max Marks</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dbAssignmentsTableBody">
+                                <!-- Populated dynamically by app.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ============================================== -->
+                <!-- SUBTAB 4: TIMETABLE TABLE                      -->
+                <!-- ============================================== -->
+                <div id="dbViewTimetable" class="db-table-view" style="display: none;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.75rem;">
+                        <div>
+                            <h5 style="font-size: 1rem; font-weight: 700; color: #0f172a;">Table: timetable Records</h5>
+                            <p id="dbTimetableCount" style="font-size: 0.8rem; color: #64748b;">All weekly scheduled lecture periods</p>
+                        </div>
+                        <button onclick="openCreateTimetableModal()" class="btn btn-primary btn-sm">➕ Add Slot to Table</button>
+                    </div>
+
+                    <div class="data-table-wrap">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Day</th>
+                                    <th>Time</th>
+                                    <th>Subject</th>
+                                    <th>Year &amp; Semester</th>
+                                    <th>Room &amp; Faculty</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dbTimetableTableBody">
+                                <!-- Populated dynamically by app.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ============================================== -->
+                <!-- SUBTAB 5: ANNOUNCEMENTS TABLE                  -->
+                <!-- ============================================== -->
+                <div id="dbViewAnnouncements" class="db-table-view" style="display: none;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.75rem;">
+                        <div>
+                            <h5 style="font-size: 1rem; font-weight: 700; color: #0f172a;">Table: announcements Records</h5>
+                            <p id="dbAnnouncementsCount" style="font-size: 0.8rem; color: #64748b;">All official circulars and notices</p>
+                        </div>
+                        <button onclick="openCreateAnnouncementModal()" class="btn btn-primary btn-sm">➕ Post Notice to Table</button>
+                    </div>
+
+                    <div class="data-table-wrap">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Title</th>
+                                    <th>Category</th>
+                                    <th>Priority</th>
+                                    <th>Target Year</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dbAnnouncementsTableBody">
+                                <!-- Populated dynamically by app.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    </div> <!-- /screenHome -->
+
+    <!-- ============================================================== -->
+    <!-- AUTHENTICATION MODAL (Student & Admin)                         -->
+    <!-- ============================================================== -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+            
+            <div class="auth-tabs">
+                <button class="auth-tab-btn active" data-auth-tab="student" onclick="switchAuthTab('student')">👨‍🎓 Student Login</button>
+                <button class="auth-tab-btn" data-auth-tab="admin" onclick="switchAuthTab('admin')">🛡️ Admin Login</button>
+            </div>
+
+            <!-- Student Login Section -->
+            <div id="studentAuthSection">
+                <form id="studentLoginForm">
+                    <div class="form-group">
+                        <label for="studentRollInput">Roll Number (User ID)</label>
+                        <input type="text" id="studentRollInput" class="form-control" placeholder="e.g. 25MBA01" required autofocus>
+                        <p class="form-help">Valid IDs: 25MBA01 to 25MBA175</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentPassInput">Password</label>
+                        <input type="password" id="studentPassInput" class="form-control" placeholder="Same as Roll Number (e.g. 25MBA01)" required>
+                        <p class="form-help">Your password is identical to your Roll Number.</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem;">
+                        Sign In as Student
+                    </button>
+
+                    <!-- Quick Demo Credentials -->
+                    <div style="margin-top: 1.25rem; padding: 0.75rem; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 6px; font-size: 0.82rem; color: #475569;">
+                        <strong>Quick Fill Test Accounts:</strong>
+                        <div style="display: flex; gap: 0.4rem; margin-top: 0.4rem; flex-wrap: wrap;">
+                            <button type="button" onclick="quickFillStudent('25MBA01')" class="btn btn-outline btn-sm">25MBA01</button>
+                            <button type="button" onclick="quickFillStudent('25MBA15')" class="btn btn-outline btn-sm">25MBA15</button>
+                            <button type="button" onclick="quickFillStudent('25MBA50')" class="btn btn-outline btn-sm">25MBA50</button>
+                            <button type="button" onclick="quickFillStudent('25MBA175')" class="btn btn-outline btn-sm">25MBA175</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Admin Login Section -->
+            <div id="adminAuthSection" style="display: none;">
+                <form id="adminLoginForm">
+                    <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 6px; padding: 0.75rem 1rem; margin-bottom: 1.2rem; font-size: 0.85rem; color: #3730a3;">
+                        🛡️ <strong>Administrator Portal:</strong> Password-only access. Full authority to upload, edit, and delete notes, assignments, timetable schedules, and extend roll numbers.
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adminPassInput">Admin Password</label>
+                        <input type="password" id="adminPassInput" class="form-control" placeholder="Enter Admin Password" required>
+                        <p class="form-help">Designated password: <code>MBA Notes</code></p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem; background: #3730a3;">
+                        Sign In as Administrator
+                    </button>
+
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <button type="button" onclick="quickFillAdmin()" class="btn btn-sm btn-outline">
+                            Auto-Fill "MBA Notes"
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- MODAL: ADMIN YEAR SELECTOR (Go to First Year or Second Year)  -->
+    <!-- ============================================================== -->
+    <div id="adminYearSelectModal" class="modal-overlay">
+        <div class="modal-box" style="max-width: 650px; border-top: 5px solid #4338ca;">
+            <button class="modal-close" onclick="closeModal('adminYearSelectModal')">&times;</button>
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+                <span class="user-role-tag role-admin" style="font-size: 0.82rem; padding: 4px 14px; margin-bottom: 0.6rem; display: inline-block;">🛡️ Administrator Session</span>
+                <h3 style="font-size: 1.6rem; color: #1e1b4b; font-weight: 800; margin: 0;">Select Academic Year</h3>
+                <p style="color: #64748b; font-size: 0.95rem; margin-top: 0.4rem;">Where would you like to go? Choose <strong>First Year</strong> or <strong>Second Year</strong> to manage:</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem;">
+                <!-- First Year Option -->
+                <div class="year-choice-card" onclick="selectAdminYear('Year 1')" style="background: #f8fafc; border: 2px solid #cbd5e1; border-radius: 12px; padding: 1.4rem; cursor: pointer; transition: all 0.2s; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                            <span style="font-size: 2.2rem;">🎓</span>
+                            <span class="badge-year" style="font-size: 0.8rem; padding: 3px 10px;">Batch 2025–2027</span>
+                        </div>
+                        <h4 style="font-size: 1.25rem; color: #1e1b4b; font-weight: 800; margin-bottom: 0.35rem;">First Year (Year 1)</h4>
+                        <div style="font-size: 0.85rem; color: #4338ca; font-weight: 700; margin-bottom: 0.6rem;">Semester 1 &amp; Semester 2</div>
+                        <p style="font-size: 0.82rem; color: #64748b; line-height: 1.45; margin-bottom: 0.85rem;">
+                            Principles of Mgmt, Managerial Economics, Financial &amp; Marketing Mgmt, Business Analytics.
+                        </p>
+                        <div style="font-size: 0.78rem; color: #3730a3; background: #e0e7ff; padding: 6px 10px; border-radius: 6px; font-weight: 600;">
+                            👨‍🎓 Students: 25MBA01 – 25MBA175
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" style="margin-top: 1.25rem; width: 100%; font-weight: 700; padding: 0.75rem;">
+                        👉 Go to First Year
+                    </button>
+                </div>
+
+                <!-- Second Year Option -->
+                <div class="year-choice-card" onclick="selectAdminYear('Year 2')" style="background: #f8fafc; border: 2px solid #cbd5e1; border-radius: 12px; padding: 1.4rem; cursor: pointer; transition: all 0.2s; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                            <span style="font-size: 2.2rem;">🎯</span>
+                            <span class="badge-sem" style="font-size: 0.8rem; padding: 3px 10px; background: #fef3c7; color: #b45309; border: 1px solid #fcd34d;">Final Year</span>
+                        </div>
+                        <h4 style="font-size: 1.25rem; color: #1e1b4b; font-weight: 800; margin-bottom: 0.35rem;">Second Year (Year 2)</h4>
+                        <div style="font-size: 0.85rem; color: #b45309; font-weight: 700; margin-bottom: 0.6rem;">Semester 3 &amp; Semester 4</div>
+                        <p style="font-size: 0.82rem; color: #64748b; line-height: 1.45; margin-bottom: 0.85rem;">
+                            Corporate Finance &amp; M&amp;A, Digital Marketing, Supply Chain Analytics, Venture Capital, Capstone.
+                        </p>
+                        <div style="font-size: 0.78rem; color: #92400e; background: #fef3c7; padding: 6px 10px; border-radius: 6px; font-weight: 600;">
+                            👨‍🎓 Students: 24MBA01 – 24MBA175
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" style="margin-top: 1.25rem; width: 100%; font-weight: 700; padding: 0.75rem; background: #d97706; border-color: #d97706;">
+                        👉 Go to Second Year
+                    </button>
+                </div>
+            </div>
+
+            <div style="text-align: center; border-top: 1px solid #e2e8f0; padding-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                <button type="button" onclick="selectAdminYear('all')" class="btn btn-outline btn-sm">
+                    🌐 View All Years Combined
+                </button>
+                <span style="font-size: 0.82rem; color: #94a3b8;">You can switch anytime via the top admin bar</span>
             </div>
         </div>
     </div>
 
-    <!-- Search Modal -->
-    <div id="searchModal" class="modal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('searchModal')">&times;</button>
-            <h2>Search Notes</h2>
-            <input type="text" id="searchModalInput" placeholder="Enter search term..." class="search-input">
-            <div id="searchResults"></div>
+
+    <!-- ============================================================== -->
+    <!-- MODAL: NOTE UPLOAD & EDIT (ADMIN)                             -->
+    <!-- ============================================================== -->
+    <div id="noteModal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('noteModal')">&times;</button>
+            <h3 id="noteModalHeading" style="margin-bottom: 1.2rem; font-size: 1.3rem;">Upload MBA Note</h3>
+
+            <form id="noteModalForm">
+                <input type="hidden" id="noteModalId">
+
+                <div class="form-group">
+                    <label for="noteModalTitle">Note Title *</label>
+                    <input type="text" id="noteModalTitle" class="form-control" placeholder="e.g. Financial Management - Working Capital Notes" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="noteModalYear">Year of Student *</label>
+                        <select id="noteModalYear" class="form-control" required onchange="handleModalYearChange()">
+                            <option value="Year 1">Year 1</option>
+                            <option value="Year 2">Year 2</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noteModalSemester">Semester *</label>
+                        <select id="noteModalSemester" class="form-control" required>
+                            <option value="Semester 1">Semester 1</option>
+                            <option value="Semester 2" selected>Semester 2</option>
+                            <option value="Semester 3">Semester 3</option>
+                            <option value="Semester 4">Semester 4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="noteModalSubject">Subject *</label>
+                        <select id="noteModalSubject" class="form-control" required>
+                            <option value="Principles of Management">Principles of Management</option>
+                            <option value="Managerial Economics">Managerial Economics</option>
+                            <option value="Financial Accounting">Financial Accounting</option>
+                            <option value="Marketing Management">Marketing Management</option>
+                            <option value="Financial Management">Financial Management</option>
+                            <option value="Human Resource Management">Human Resource Management</option>
+                            <option value="Operations & Supply Chain">Operations & Supply Chain</option>
+                            <option value="Business Analytics">Business Analytics</option>
+                            <option value="Strategic Management">Strategic Management</option>
+                            <option value="Entrepreneurship">Entrepreneurship</option>
+                            <option value="Business Ethics & ESG">Business Ethics & ESG</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noteModalCourseCode">Course Code</label>
+                        <input type="text" id="noteModalCourseCode" class="form-control" placeholder="e.g. MBA202">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="noteModalDesc">Description &amp; Syllabus Coverage</label>
+                    <textarea id="noteModalDesc" class="form-control" rows="3" placeholder="Brief outline of chapters, formulas, and case studies included."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="noteModalFile">Document File (PDF / DOC)</label>
+                    <input type="file" id="noteModalFile" class="form-control" accept=".pdf,.doc,.docx,.txt">
+                    <p class="form-help">Automatically uploaded to file server and indexed in Firebase Firestore.</p>
+                </div>
+
+                <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem;">
+                    <button type="button" onclick="closeModal('noteModal')" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save to Firebase</button>
+                </div>
+            </form>
         </div>
     </div>
+
+
+    <!-- ============================================================== -->
+    <!-- MODAL: ASSIGNMENT CREATE & EDIT (ADMIN)                       -->
+    <!-- ============================================================== -->
+    <div id="assignmentModal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('assignmentModal')">&times;</button>
+            <h3 id="assignModalHeading" style="margin-bottom: 1.2rem; font-size: 1.3rem;">Create Assignment</h3>
+
+            <form id="assignmentModalForm">
+                <input type="hidden" id="assignModalId">
+
+                <div class="form-group">
+                    <label for="assignModalTitle">Assignment Title *</label>
+                    <input type="text" id="assignModalTitle" class="form-control" placeholder="e.g. Retail STP Strategy Analysis" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="assignModalYear">Academic Year *</label>
+                        <select id="assignModalYear" class="form-control" required>
+                            <option value="Year 1">Year 1</option>
+                            <option value="Year 2">Year 2</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assignModalSemester">Semester *</label>
+                        <select id="assignModalSemester" class="form-control" required>
+                            <option value="Semester 1">Semester 1</option>
+                            <option value="Semester 2" selected>Semester 2</option>
+                            <option value="Semester 3">Semester 3</option>
+                            <option value="Semester 4">Semester 4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="assignModalSubject">Subject *</label>
+                        <select id="assignModalSubject" class="form-control" required>
+                            <option value="Principles of Management">Principles of Management</option>
+                            <option value="Managerial Economics">Managerial Economics</option>
+                            <option value="Financial Accounting">Financial Accounting</option>
+                            <option value="Marketing Management">Marketing Management</option>
+                            <option value="Financial Management">Financial Management</option>
+                            <option value="Human Resource Management">Human Resource Management</option>
+                            <option value="Operations & Supply Chain">Operations & Supply Chain</option>
+                            <option value="Business Analytics">Business Analytics</option>
+                            <option value="Strategic Management">Strategic Management</option>
+                            <option value="Entrepreneurship">Entrepreneurship</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assignModalFaculty">Faculty In-Charge</label>
+                        <input type="text" id="assignModalFaculty" class="form-control" placeholder="e.g. Dr. Rajesh Nair">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="assignModalDueDate">Due Date *</label>
+                        <input type="date" id="assignModalDueDate" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assignModalMarks">Max Marks</label>
+                        <input type="number" id="assignModalMarks" class="form-control" value="25">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assignModalStatus">Status</label>
+                        <select id="assignModalStatus" class="form-control">
+                            <option value="Open">Open</option>
+                            <option value="Urgent">Urgent</option>
+                            <option value="Closed">Closed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="assignModalDesc">Assignment Brief &amp; Questions</label>
+                    <textarea id="assignModalDesc" class="form-control" rows="3" placeholder="Provide problem statement, formatting guidelines, page limit, and criteria."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="assignModalSubInfo">Submission Instructions</label>
+                    <input type="text" id="assignModalSubInfo" class="form-control" placeholder="e.g. Upload PDF report to college portal by 11:59 PM">
+                </div>
+
+                <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem;">
+                    <button type="button" onclick="closeModal('assignmentModal')" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save to Firebase</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- MODAL: TIMETABLE SLOT CREATE & EDIT (ADMIN)                    -->
+    <!-- ============================================================== -->
+    <div id="timetableModal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('timetableModal')">&times;</button>
+            <h3 id="slotModalHeading" style="margin-bottom: 1.2rem; font-size: 1.3rem;">Add Class Slot</h3>
+
+            <form id="timetableModalForm">
+                <input type="hidden" id="slotModalId">
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="slotModalYear">Academic Year *</label>
+                        <select id="slotModalYear" class="form-control" required>
+                            <option value="Year 1">Year 1</option>
+                            <option value="Year 2">Year 2</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="slotModalSemester">Semester *</label>
+                        <select id="slotModalSemester" class="form-control" required>
+                            <option value="Semester 1">Semester 1</option>
+                            <option value="Semester 2" selected>Semester 2</option>
+                            <option value="Semester 3">Semester 3</option>
+                            <option value="Semester 4">Semester 4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="slotModalDay">Day *</label>
+                        <select id="slotModalDay" class="form-control" required>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="slotModalTime">Time Slot *</label>
+                        <input type="text" id="slotModalTime" class="form-control" placeholder="e.g. 09:00 AM - 10:30 AM" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="slotModalSubject">Subject *</label>
+                    <input type="text" id="slotModalSubject" class="form-control" placeholder="e.g. Marketing Management" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="slotModalCourseCode">Course Code</label>
+                        <input type="text" id="slotModalCourseCode" class="form-control" placeholder="e.g. MBA201">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="slotModalFaculty">Faculty</label>
+                        <input type="text" id="slotModalFaculty" class="form-control" placeholder="e.g. Dr. Rajesh Nair">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="slotModalRoom">Classroom / Lab</label>
+                        <input type="text" id="slotModalRoom" class="form-control" placeholder="e.g. Hall A-101">
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem;">
+                    <button type="button" onclick="closeModal('timetableModal')" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save to Firebase</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- MODAL: ANNOUNCEMENT CREATE & EDIT (ADMIN)                      -->
+    <!-- ============================================================== -->
+    <div id="announcementModal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('announcementModal')">&times;</button>
+            <h3 id="noticeModalHeading" style="margin-bottom: 1.2rem; font-size: 1.3rem;">Post Campus Notice</h3>
+
+            <form id="announcementModalForm">
+                <input type="hidden" id="noticeModalId">
+
+                <div class="form-group">
+                    <label for="noticeModalTitle">Notice Title *</label>
+                    <input type="text" id="noticeModalTitle" class="form-control" placeholder="e.g. Mid-Term Examination Schedule" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="noticeModalYear">Target Audience</label>
+                        <select id="noticeModalYear" class="form-control">
+                            <option value="All Years">All Years</option>
+                            <option value="Year 1">Year 1 Students</option>
+                            <option value="Year 2">Year 2 Students</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noticeModalCategory">Category</label>
+                        <select id="noticeModalCategory" class="form-control">
+                            <option value="Academic">Academic</option>
+                            <option value="Exam">Examination</option>
+                            <option value="Placement">Placement / Internship</option>
+                            <option value="Notice">General Notice</option>
+                            <option value="Event">Event / Seminar</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noticeModalPriority">Priority Level</label>
+                        <select id="noticeModalPriority" class="form-control">
+                            <option value="normal">Normal</option>
+                            <option value="urgent">Urgent (Red Alert)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="noticeModalAuthor">Issuing Authority</label>
+                    <input type="text" id="noticeModalAuthor" class="form-control" placeholder="e.g. MBA Academic Office">
+                </div>
+
+                <div class="form-group">
+                    <label for="noticeModalContent">Notice Content *</label>
+                    <textarea id="noticeModalContent" class="form-control" rows="4" placeholder="Detailed circular or notification text..." required></textarea>
+                </div>
+
+                <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem;">
+                    <button type="button" onclick="closeModal('announcementModal')" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Publish to Firebase</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Toast Notification Container -->
+    <div id="toastNotification"></div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 College Notes Platform. All rights reserved.</p>
-        <p>Built with ❤️ for students</p>
+        <div class="footer-inner">
+            <div>
+                <p style="font-weight: 700; color: white; font-size: 1rem; margin-bottom: 0.25rem;">MBA College Notes Platform</p>
+                <p>Designed for graduate business students. Seamless online notes, assignments &amp; timetable hub synced to Firebase Firestore console.</p>
+            </div>
+            <div>
+                <p>&copy; 2026 Department of Management Studies. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/config.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/apip.js"></script>
-    <script>
-        // Register Service Worker for PWA
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js').catch(err => console.log('SW registration failed:', err));
-        }
-    </script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

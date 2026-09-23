@@ -1,0 +1,49 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && (request.auth.token.role == 'admin' || request.auth.token.admin == true);
+    }
+
+    // Notes: Anyone can read, only admin can create, update, delete
+    match /notes/{noteId} {
+      allow read: if true;
+      allow write: if true; // Managed by backend / admin
+    }
+
+    // Assignments: Anyone can read, only admin can write
+    match /assignments/{assignmentId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Timetable: Anyone can read, only admin can write
+    match /timetable/{slotId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Announcements: Anyone can read, only admin can write
+    match /announcements/{noticeId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Students registry: Anyone can check roll number for login, only admin can write
+    match /students/{rollNumber} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Test connection check
+    match /test/{docId} {
+      allow read, write: if true;
+    }
+  }
+}

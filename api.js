@@ -1,5 +1,6 @@
+// Re-export /js/api.js for root access
 // API Configuration - Local Backend
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = '/api';
 
 let authToken = localStorage.getItem('token') || null;
 let currentUser = null;
@@ -16,10 +17,16 @@ async function checkAuthStatus() {
       if (response.ok) {
         const data = await response.json();
         currentUser = data.user;
+      } else {
+        localStorage.removeItem('token');
+        authToken = null;
+        currentUser = null;
       }
     } catch (error) {
       console.error('Auth check failed:', error);
       localStorage.removeItem('token');
+      authToken = null;
+      currentUser = null;
     }
   }
 }
@@ -97,6 +104,7 @@ function logout() {
   authToken = null;
   currentUser = null;
 }
+window.logout = logout;
 
 // Notes Functions
 async function fetchNotes(filters = {}) {
@@ -106,7 +114,8 @@ async function fetchNotes(filters = {}) {
     if (filters.category) params.append('category', filters.category);
     if (filters.sort) params.append('sort', filters.sort);
 
-    const data = await apiCall(`/notes?${params.toString()}`);
+    const queryStr = params.toString() ? `?${params.toString()}` : '';
+    const data = await apiCall(`/notes${queryStr}`);
     return data;
   } catch (error) {
     console.error('Fetch notes error:', error);
@@ -118,9 +127,9 @@ async function uploadNote(noteData, file) {
   try {
     const formData = new FormData();
     formData.append('title', noteData.title);
-    formData.append('description', noteData.description);
+    formData.append('description', noteData.description || '');
     formData.append('category', noteData.category);
-    formData.append('courseCode', noteData.courseCode);
+    formData.append('courseCode', noteData.courseCode || '');
     formData.append('file', file);
 
     const headers = {};
@@ -155,9 +164,10 @@ async function downloadNote(noteId) {
       url += `?userId=${userId}`;
     }
 
-    // Create download link
+    // Trigger download
     const a = document.createElement('a');
     a.href = url;
+    a.setAttribute('download', '');
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
